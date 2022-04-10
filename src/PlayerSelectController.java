@@ -3,10 +3,13 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.util.Callback;
 
+import java.util.List;
 
 
 public class PlayerSelectController {
@@ -20,7 +23,7 @@ public class PlayerSelectController {
     // initialize controller
     public void initialize() {
         // populate the ObservalbeList<Player>
-        player.add(new Player("Justin Fields", "/images/small/JustinFields.jpg", "/images/large/JustinFields.jpg"));
+        player.add(new Player("Justin Fields", "C:/images/small/JustinFields.jpg", "/images/large/JustinFields.jpg"));
         player.add(new Player("Tom Brady", "/images/small/TomBrady.jpg", "/images/large/TomBrady.jpg"));
         player.add(new Player("Kirk Cousins", "/images/small/KirkCousins.jpg", "/images/large/KirkCousins.jpg"));
         player.add(new Player("Patrick Mahomes", "/images/small/PatrickMahomes.jpg", "/images/large/PatrickMahomes.jpg"));
@@ -32,9 +35,15 @@ public class PlayerSelectController {
                     @Override
                     public void changed(ObservableValue<? extends Player> observableValue, Player oldValue,
                                         Player newValue) {
-                        playerImageView.setImage( new Image(newValue.getLargeImage()));
+                        playerImageView.setImage(new Image(newValue.getLargeImage()));
                     }
                 }
         );
+        playerListView.setCellFactory(new Callback<ListView<Player>, ListCell<Player>>() {
+            @Override
+            public ListCell<Player> call (ListView<Player> listView) {
+                return new ImageTextCell();
+            }
+        });
     }
 }

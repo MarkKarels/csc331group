@@ -8,6 +8,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Callback;
+import javafx.event.ActionEvent;
 import java.util.List;
 
 
@@ -15,9 +16,38 @@ public class PlayerSelectController {
     // instance variables for interacting with GUI
     @FXML private ListView<Player> playerListView;
     @FXML private ImageView playerImageView;
-
     // stores the list of Player Objects
     private final ObservableList<Player> player = FXCollections.observableArrayList();
+
+    @FXML
+    void defButtonPress(ActionEvent event) {
+
+    }
+
+    @FXML
+    void kButtonPress(ActionEvent event) {
+
+    }
+
+    @FXML
+    void qbButtonPress(ActionEvent event) {
+
+    }
+
+    @FXML
+    void rbButtonPress(ActionEvent event) {
+
+    }
+
+    @FXML
+    void teButtonPress(ActionEvent event) {
+
+    }
+
+    @FXML
+    void wrButtonPress(ActionEvent event) {
+
+    }
 
     // initialize controller
     public void initialize() {

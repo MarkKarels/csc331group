@@ -23,7 +23,7 @@ public class PlayerSelectController {
     // initialize controller
     public void initialize() {
         // populate the ObservalbeList<Player>
-        player.add(new Player("Justin Fields", "C:/images/small/JustinFields.jpg", "/images/large/JustinFields.jpg"));
+        player.add(new Player("Justin Fields", "/images/small/JustinFields.jpg", "/images/large/JustinFields.jpg"));
         player.add(new Player("Tom Brady", "/images/small/TomBrady.jpg", "/images/large/TomBrady.jpg"));
         player.add(new Player("Kirk Cousins", "/images/small/KirkCousins.jpg", "/images/large/KirkCousins.jpg"));
         player.add(new Player("Patrick Mahomes", "/images/small/PatrickMahomes.jpg", "/images/large/PatrickMahomes.jpg"));

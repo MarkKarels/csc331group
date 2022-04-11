@@ -37,10 +37,11 @@ public class QB extends Player{
 
     @Override
     public String toString() {
-        return String.format("%s%n%-20s%,.2f%n%-20s%,.2f%n%-20s%,.2f%n%-20s%d%n%-20s%d%n%-20s%d%n%-20s%,.2f%n%-20s%d",
+        return String.format("%n%50s%n%n%-53s%,.1f pts%n%n%48s%n%n%-62s%,.1f pts%n%-55s%,.1f yds%n%-47s%d tds%n%-49s%d ints%n%-50s%d per%n%-54s%,.1f yds%n%-46s%d tds",
                 super.toString(),
                 "2021 Total Points: ", getPrevPoints(),
-                "2022 Projected Points: ", getProjPoints(),
+                "2022 Projected",
+                "Points: ", getProjPoints(),
                 "Passing Yards: ", passYDs,
                 "Passing Touchdowns: ", passTDs,
                 "Passing Interceptions: ", passInt,

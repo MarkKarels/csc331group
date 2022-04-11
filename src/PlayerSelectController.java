@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Callback;
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextArea;
 import java.util.List;
 
 
@@ -20,8 +21,19 @@ public class PlayerSelectController {
     // instance variables for interacting with GUI
     @FXML private ListView<Player> playerListView;
     @FXML private ImageView playerImageView;
+    @FXML private TextArea detailedText;
     // stores the list of Player Objects
     private final ObservableList<Player> player = FXCollections.observableArrayList();
+
+    @FXML
+    void selectPlayerButtonPress(ActionEvent event) {
+
+    }
+
+    @FXML
+    void viewTeamButtonPress(ActionEvent event) {
+
+    }
 
     @FXML
     void defButtonPress(ActionEvent event) {
@@ -138,6 +150,7 @@ public class PlayerSelectController {
                     public void changed(ObservableValue<? extends Player> observableValue, Player oldValue,
                                         Player newValue) {
                         playerImageView.setImage(new Image(newValue.getLargeImage()));
+                        detailedText.setText(newValue.toString());
                     }
                 }
         );

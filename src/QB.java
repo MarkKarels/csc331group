@@ -10,9 +10,9 @@ public class QB extends Player{
     private double rushYDs;
     private int rushTDs;
 
-    public QB(String player, String team, String thumbImage, String largeImage, double prevPoints, double projPoints,
+    public QB(String player, String team, String thumbImage, String largeImage, String position, double prevPoints, double projPoints,
               double passYDs, int passTDs, int passInt, int rushCar, double rushYDs, int rushTDs) {
-        super(player, team, thumbImage, largeImage, prevPoints, projPoints);
+        super(player, team, thumbImage, largeImage, position, prevPoints, projPoints);
         this.passYDs = passYDs;
         this.passTDs = passTDs;
         this.passInt = passInt;

@@ -40,15 +40,15 @@ public class PlayerSelectController {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
         player.add(new Player("Chicago Bears", "Chicago Bears", "/images/small/ChicagoBears.jpg",
-                "/images/large/ChicagoBears.jpg", 105.0, 90.8));
+                "/images/large/ChicagoBears.jpg", "Def", 105.0, 90.8));
         player.add(new Player("Carolina Panthers", "Carolina Panthers", "/images/small/CarolinaPanthers.png",
-                "/images/large/CarolinaPanthers.png", 88.0, 99.69));
+                "/images/large/CarolinaPanthers.png", "Def", 88.0, 99.69));
         player.add(new Player("Houston Texans", "Houston Texans", "/images/small/HoustonTexans.jpg",
-                "/images/large/HoustonTexans.jpg", 58.0, 56.35));
+                "/images/large/HoustonTexans.jpg", "Def", 58.0, 56.35));
         player.add(new Player("Los Angeles Rams", "Los Angeles Rams", "/images/small/LARams.jpg",
-                "/images/large/LARams.jpg", 105.0, 94.1));
+                "/images/large/LARams.jpg", "Def", 105.0, 94.1));
         player.add(new Player("BuffaloBills", "Buffalo Bills", "/images/small/BuffaloBills.jpg",
-                "/images/large/BuffaloBills.jpg", 154.0, 129.83));
+                "/images/large/BuffaloBills.jpg", "Def", 154.0, 129.83));
         playerListView.setItems(player);
     }
 
@@ -57,15 +57,15 @@ public class PlayerSelectController {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
         player.add(new Player("Cairo Santos", "Chicago Bears", "/images/small/CairoSantos.jpg",
-                "/images/large/CairoSantos.jpg", 112.0, 123.64));
+                "/images/large/CairoSantos.jpg", "K", 112.0, 123.64));
         player.add(new Player("Justin Tucker", "Baltimore Ravens", "/images/small/JustinTucker.jpg",
-                "/images/large/JustinTucker.jpg", 161.0, 140.14));
+                "/images/large/JustinTucker.jpg", "K", 161.0, 140.14));
         player.add(new Player("Jason Sanders", "Miami Dolphins", "/images/small/JasonSanders.jpg",
-                "/images/large/JasonSanders.jpg", 107.0, 109.77));
+                "/images/large/JasonSanders.jpg", "K", 107.0, 109.77));
         player.add(new Player("Harrison Butker", "Kansas City Chiefs", "/images/small/HarrisonButker.jpg",
-                "/images/large/HarrisonButker.jpg", 137.0, 145.51));
+                "/images/large/HarrisonButker.jpg", "K", 137.0, 145.51));
         player.add(new Player("Robbie Gould", "San Francisco 49ers", "/images/small/RobbieGould.jpg",
-                "/images/large/RobbieGould.jpg", 109.0, 130.86));
+                "/images/large/RobbieGould.jpg", "K", 109.0, 130.86));
         playerListView.setItems(player);
     }
 
@@ -74,19 +74,19 @@ public class PlayerSelectController {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
         player.add(new QB("Justin Fields", "Chicago Bears", "/images/small/JustinFields.jpg",
-                "/images/large/JustinFields.jpg", 126.8, 255.92, 3625.0, 19,
+                "/images/large/JustinFields.jpg", "QB", 126.8, 255.92, 3625.0, 19,
                 15, 99, 578.0, 3));
         player.add(new QB("Tom Brady", "Tampa Bay Buccaneers", "/images/small/TomBrady.jpg",
-                "/images/large/TomBrady.jpg", 374.74, 315.13, 4485.0, 36,
+                "/images/large/TomBrady.jpg", "QB", 374.74, 315.13, 4485.0, 36,
                 12, 29, 56.0, 2));
         player.add(new QB("Kirk Cousins", "Minnesota Vikings", "/images/small/KirkCousins.jpg",
-                "/images/large/KirkCousins.jpg", 300.34, 279.57, 4108.0, 27,
+                "/images/large/KirkCousins.jpg", "QB", 300.34, 279.57, 4108.0, 27,
                 10, 29, 104.0, 1));
         player.add(new QB("Patrick Mahomes", "Kansas City Chiefs", "/images/small/PatrickMahomes.jpg",
-                "/images/large/PatrickMahomes.jpg", 361.66, 353.84, 4683.0, 35,
+                "/images/large/PatrickMahomes.jpg", "QB", 361.66, 353.84, 4683.0, 35,
                 12, 64, 395.0, 3));
         player.add(new QB("Justin Herbert", "Los Angeles Chargers", "/images/small/JustinHerbert.jpg",
-                "/images/large/JustinHerbert.jpg", 380.76, 329.13, 4338.0, 33,
+                "/images/large/JustinHerbert.jpg", "QB", 380.76, 329.13, 4338.0, 33,
                 12, 60, 285, 3));
         playerListView.setItems(player);
     }
@@ -96,15 +96,15 @@ public class PlayerSelectController {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
         player.add(new Player("David Montgomery", "Chicago Bears", "/images/small/DavidMontgomery.jpg",
-                "/images/large/DavidMontgomery.jpg", 195.0, 241.64));
+                "/images/large/DavidMontgomery.jpg", "RB", 195.0, 241.64));
         player.add(new Player("Christian McCaffrey", "Carolina Panthers", "/images/small/ChristianMcCaffrey.jpg",
-                "/images/large/ChristianMcCaffrey.jpg", 127.5, 301.6));
+                "/images/large/ChristianMcCaffrey.jpg", "RB", 127.5, 301.6));
         player.add(new Player("Nick Chubb", "Cleveland Browns", "/images/small/NickChubb.jpg",
-                "/images/large/NickChubb.jpg", 215.3, 213.82));
+                "/images/large/NickChubb.jpg", "RB", 215.3, 213.82));
         player.add(new Player("Derrick Henry", "Tennessee Titans", "/images/small/DerrickHenry.jpg",
-                "/images/large/DerrickHenry.jpg", 193.3, 275.78));
+                "/images/large/DerrickHenry.jpg", "RB", 193.3, 275.78));
         player.add(new Player("Jonathan Taylor", "Indianapolis Colts", "/images/small/JonathanTaylor.jpg",
-                "/images/large/JonathanTaylor.jpg", 373.1, 316.27));
+                "/images/large/JonathanTaylor.jpg", "RB", 373.1, 316.27));
         playerListView.setItems(player);
     }
 
@@ -113,15 +113,15 @@ public class PlayerSelectController {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
         player.add(new Player("Cole Kmet", "Chicago Bears", "/images/small/ColeKmet.jpg",
-                "/images/large/ColeKmet.jpg", 121.2, 136.59));
+                "/images/large/ColeKmet.jpg", "TE", 121.2, 136.59));
         player.add(new Player("Travis Kelce", "Kansas City Chiefs", "/images/small/TravisKelce.jpg",
-                "/images/large/TravisKelce.jpg", 262.8, 240.65));
+                "/images/large/TravisKelce.jpg", "TE", 262.8, 240.65));
         player.add(new Player("Darren Waller", "Las Vegas Raiders", "/images/small/DarrenWaller.jpg",
-                "/images/large/DarrenWaller.jpg", 133.5, 195.33));
+                "/images/large/DarrenWaller.jpg", "TE", 133.5, 195.33));
         player.add(new Player("George Kittle", "San Francisco 49ers", "/images/small/GeorgeKittle.jpg",
-                "/images/large/GeorgeKittle.jpg", 198.0, 181.57));
+                "/images/large/GeorgeKittle.jpg", "TE", 198.0, 181.57));
         player.add(new Player("Mark Andrews", "Baltimore Ravens", "/images/small/MarkAndrews.jpg",
-                "/images/large/MarkAndrews.jpg", 301.1, 254.12));
+                "/images/large/MarkAndrews.jpg", "TE", 301.1, 254.12));
         playerListView.setItems(player);
     }
 
@@ -130,15 +130,15 @@ public class PlayerSelectController {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
         player.add(new Player("DeVante Adams", "Las Vegas Raiders", "/images/small/DeVanteAdams.jpg",
-                "/images/large/DeVanteAdams.jpg", 344.3, 260.95));
+                "/images/large/DeVanteAdams.jpg", "WR", 344.3, 260.95));
         player.add(new Player("Tyreek Hill", "Miami Dolphins", "/images/small/TyreekHill.jpg",
-                "/images/large/TyreekHill.jpg", 296.5, 257.2));
+                "/images/large/TyreekHill.jpg", "WR", 296.5, 257.2));
         player.add(new Player("DK Metcalf", "Seattle Seahawks", "/images/small/DKMetcalf.jpg",
-                "/images/large/DKMetcalf.jpg", 244.3, 239.15));
+                "/images/large/DKMetcalf.jpg", "WR", 244.3, 239.15));
         player.add(new Player("DeAndre Hopkins", "Arizona Cardinals", "/images/small/DeAndreHopkins.jpg",
-                "/images/large/DeAndreHopkins.jpg", 147.2, 234.13));
+                "/images/large/DeAndreHopkins.jpg", "WR", 147.2, 234.13));
         player.add(new Player("Ja'Marr Chase", "Cincinnati Bengals", "/images/small/JaMarrChase.jpg",
-                "/images/large/JaMarrChase.jpg", 304.6, 287.47));
+                "/images/large/JaMarrChase.jpg", "WR", 304.6, 287.47));
         playerListView.setItems(player);
     }
 

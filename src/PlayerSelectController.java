@@ -17,7 +17,6 @@ import javafx.scene.control.TextArea;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Arrays;
-import javafx.scene.input.MouseEvent;
 
 
 public class PlayerSelectController {
@@ -117,14 +116,9 @@ public class PlayerSelectController {
     @FXML
     void selectPlayerButtonPress(ActionEvent event) {
         team.add(playerListView.getSelectionModel().getSelectedItem());
-    }
-
-    @FXML
-    void viewTeamButtonPress(ActionEvent event) {
-        playerListView.getItems().clear();
-        playerListView.setItems(team);
+        teamListView.setItems(team);
         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
-        myTeam.setText(team.toString());
+
     }
 
     @FXML
@@ -191,7 +185,27 @@ public class PlayerSelectController {
                     }
                 }
         );
+        teamListView.getSelectionModel().selectedItemProperty().addListener(
+                new ChangeListener<Player>() {
+                    @Override
+                    public void changed(ObservableValue<? extends Player> observableValue, Player oldValue,
+                                        Player newValue) {
+                        try {
+                            playerImageView.setImage(new Image(newValue.getLargeImage()));
+                            playerStats.setText(newValue.toString());
+                        } catch(NullPointerException ignored) {
+                            ;
+                        }
+                    }
+                }
+        );
         playerListView.setCellFactory(new Callback<ListView<Player>, ListCell<Player>>() {
+            @Override
+            public ListCell<Player> call (ListView<Player> listView) {
+                return new ImageTextCell();
+            }
+        });
+        teamListView.setCellFactory(new Callback<ListView<Player>, ListCell<Player>>() {
             @Override
             public ListCell<Player> call (ListView<Player> listView) {
                 return new ImageTextCell();

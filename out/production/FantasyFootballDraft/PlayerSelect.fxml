@@ -91,34 +91,6 @@
          </children>
       </HBox>
    </top>
-   <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectPlayerButtonPress" prefWidth="300.0" text="Select Player">
-               <font>
-                  <Font name="Comic Sans MS" size="18.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="25.0" left="120.0" right="120.0" top="25.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </Button>
-            <Button maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewTeamButtonPress" prefWidth="300.0" text="View Team">
-               <font>
-                  <Font name="Comic Sans MS" size="18.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="25.0" left="120.0" right="120.0" top="25.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </Button>
-         </children>
-      </HBox>
-   </bottom>
    <left>
       <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0" BorderPane.alignment="CENTER">
         <panes>
@@ -177,4 +149,17 @@
          </padding>
       </Accordion>
    </right>
+   <bottom>
+      <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectPlayerButtonPress" prefWidth="300.0" text="Select Player" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
 </BorderPane>

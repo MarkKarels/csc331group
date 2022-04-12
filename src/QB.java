@@ -38,8 +38,8 @@ public class QB extends Player{
     @Override
     public String toString() {
         return String.format("%n%-20s%-20s%s%n%n%-33s%,.1f pts%n%n%48s%n%n%-32s%,.1f pts%n%-35s%,.1f yds%n%-27s%d tds%n%-29s%d ints%n%-30s%d per%n%-34s%,.1f yds%n%-26s%d tds",
-                super.toString(),
-                getTeam(), getPosition(),
+                getPosition(),
+                getPlayer(), getTeam(),
                 "2021 Total Points: ", getPrevPoints(),
                 "2022 Projected",
                 "Points: ", getProjPoints(),

@@ -14,9 +14,9 @@ import javafx.scene.image.ImageView;
 import javafx.util.Callback;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
-
+import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+import java.util.Arrays;
 
 
 public class PlayerSelectController {
@@ -26,6 +26,7 @@ public class PlayerSelectController {
     @FXML private TextArea detailedText;
     // stores the list of Player Objects
     private final ObservableList<Player> player = FXCollections.observableArrayList();
+    private final ObservableList<Player> team = FXCollections.observableArrayList();
 
     Player[] QB = new Player[] {
         new QB("Justin Fields", "Chicago Bears", "/images/small/JustinFields.jpg",
@@ -117,7 +118,9 @@ public class PlayerSelectController {
 
     @FXML
     void viewTeamButtonPress(ActionEvent event) {
-
+        playerListView.setItems(team);
+        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+        detailedText.setText(team.toString());
     }
 
     @FXML

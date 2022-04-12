@@ -17,13 +17,16 @@ import javafx.scene.control.TextArea;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Arrays;
+import javafx.scene.input.MouseEvent;
 
 
 public class PlayerSelectController {
     // instance variables for interacting with GUI
     @FXML private ListView<Player> playerListView;
+    @FXML private ListView<Player> teamListView;
     @FXML private ImageView playerImageView;
-    @FXML private TextArea detailedText;
+    @FXML private TextArea myTeam;
+    @FXML private TextArea playerStats;
     // stores the list of Player Objects
     private final ObservableList<Player> player = FXCollections.observableArrayList();
     private final ObservableList<Player> team = FXCollections.observableArrayList();
@@ -113,14 +116,15 @@ public class PlayerSelectController {
 
     @FXML
     void selectPlayerButtonPress(ActionEvent event) {
-
+        team.add(playerListView.getSelectionModel().getSelectedItem());
     }
 
     @FXML
     void viewTeamButtonPress(ActionEvent event) {
+        playerListView.getItems().clear();
         playerListView.setItems(team);
         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
-        detailedText.setText(team.toString());
+        myTeam.setText(team.toString());
     }
 
     @FXML
@@ -180,7 +184,7 @@ public class PlayerSelectController {
                                         Player newValue) {
                         try {
                             playerImageView.setImage(new Image(newValue.getLargeImage()));
-                            detailedText.setText(newValue.toString());
+                            playerStats.setText(newValue.toString());
                         } catch(NullPointerException ignored) {
                             ;
                         }

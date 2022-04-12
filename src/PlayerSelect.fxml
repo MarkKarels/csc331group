@@ -92,13 +92,17 @@
       </HBox>
    </top>
    <left>
-      <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0" BorderPane.alignment="CENTER">
+      <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="300.0" BorderPane.alignment="CENTER">
         <panes>
           <TitledPane animated="false" text="Available Players">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ListView fx:id="playerListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0" />
+                        <ListView fx:id="playerListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </ListView>
                      </children>
                   </AnchorPane>
             </content>
@@ -107,9 +111,9 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ListView fx:id="teamListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0">
+                        <ListView fx:id="teamListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
                            <padding>
-                              <Insets left="8.0" />
+                              <Insets right="10.0" />
                            </padding>
                         </ListView>
                      </children>
@@ -123,13 +127,20 @@
       </Accordion>
    </left>
    <right>
-      <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0" BorderPane.alignment="CENTER">
+      <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="300.0" BorderPane.alignment="CENTER">
         <panes>
           <TitledPane animated="false" text="Player Stats">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextArea fx:id="playerStats" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="240.0" />
+                        <TextArea fx:id="playerStats" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Comic Sans MS Bold Italic" size="14.0" />
+                           </font>
+                        </TextArea>
                      </children>
                   </AnchorPane>
             </content>
@@ -138,7 +149,14 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextArea fx:id="myTeam" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="240.0" />
+                        <TextArea fx:id="myTeam" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Comic Sans MS Bold Italic" size="14.0" />
+                           </font>
+                        </TextArea>
                      </children>
                   </AnchorPane>
             </content>

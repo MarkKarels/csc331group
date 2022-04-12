@@ -39,6 +39,7 @@ public class PlayerSelectController {
     void defButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
+        player.add(new Player());
         player.add(new Player("Chicago Bears", "Chicago Bears", "/images/small/ChicagoBears.jpg",
                 "/images/large/ChicagoBears.jpg", "Def", 105.0, 90.8));
         player.add(new Player("Carolina Panthers", "Carolina Panthers", "/images/small/CarolinaPanthers.png",

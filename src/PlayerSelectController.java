@@ -17,6 +17,7 @@ import javafx.scene.control.TextArea;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Arrays;
+import java.util.Objects;
 
 
 public class PlayerSelectController {
@@ -145,8 +146,37 @@ public class PlayerSelectController {
 
     @FXML
     void selectPlayerButtonPress(ActionEvent event) {
+        Player[] tmpQB = new Player[QB.length - 1];
+        Player[] tmpRB = new Player[RB.length - 1];
+
         team.add(playerListView.getSelectionModel().getSelectedItem());
         teamListView.setItems(team);
+        String name = playerListView.getSelectionModel().getSelectedItem().getPlayer();
+        String position = playerListView.getSelectionModel().getSelectedItem().getPosition();
+
+        if (Objects.equals(position, "QB")) {
+            int j = 0;
+            for (Player value : QB) {
+                if (Objects.equals(name, value.getPlayer())) {
+                    ;
+                } else {
+                    tmpQB[j++] = value;
+                }
+            }
+            QB = tmpQB;
+        }
+
+        if (Objects.equals(position, "RB")) {
+            int j = 0;
+            for (Player value : RB) {
+                if (Objects.equals(name, value.getPlayer())) {
+                    ;
+                } else {
+                    tmpRB[j++] = value;
+                }
+            }
+            RB = tmpRB;
+        }
         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
 
     }

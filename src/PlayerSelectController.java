@@ -144,11 +144,11 @@ public class PlayerSelectController {
                     "/images/large/BuffaloBills.jpg", "Def", 154.0, 129.83)
     };
 
-    Player[] tmpQB = new Player[QB.length - 1];
-    Player[] tmpRB = new Player[RB.length - 1];
-
     @FXML
     void selectPlayerButtonPress(ActionEvent event) {
+        Player[] tmpQB = new Player[QB.length - 1];
+        Player[] tmpRB = new Player[RB.length - 1];
+
         team.add(playerListView.getSelectionModel().getSelectedItem());
         teamListView.setItems(team);
         String name = playerListView.getSelectionModel().getSelectedItem().getPlayer();

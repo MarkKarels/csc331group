@@ -92,55 +92,55 @@ public class PlayerSelectController {
     };
 
     Player[] WR = new Player[] {
-        new Player("DeVante Adams", "Las Vegas Raiders", "/images/small/DeVanteAdams.jpg",
-             "/images/large/DeVanteAdams.jpg", "WR", 344.3, 260.95),
-        new Player("Tyreek Hill", "Miami Dolphins", "/images/small/TyreekHill.jpg",
-             "/images/large/TyreekHill.jpg", "WR", 296.5, 257.2),
-        new Player("DK Metcalf", "Seattle Seahawks", "/images/small/DKMetcalf.jpg",
-             "/images/large/DKMetcalf.jpg", "WR", 244.3, 239.15),
-        new Player("DeAndre Hopkins", "Arizona Cardinals", "/images/small/DeAndreHopkins.jpg",
-             "/images/large/DeAndreHopkins.jpg", "WR", 147.2, 234.13),
-        new Player("Ja'Marr Chase", "Cincinnati Bengals", "/images/small/JaMarrChase.jpg",
-             "/images/large/JaMarrChase.jpg", "WR", 304.6, 287.47)
+            new Player("DeVante Adams", "Las Vegas Raiders", "/images/small/DeVanteAdams.jpg",
+                    "/images/large/DeVanteAdams.jpg", "WR", 344.3, 260.95),
+            new Player("Tyreek Hill", "Miami Dolphins", "/images/small/TyreekHill.jpg",
+                    "/images/large/TyreekHill.jpg", "WR", 296.5, 257.2),
+            new Player("DK Metcalf", "Seattle Seahawks", "/images/small/DKMetcalf.jpg",
+                    "/images/large/DKMetcalf.jpg", "WR", 244.3, 239.15),
+            new Player("DeAndre Hopkins", "Arizona Cardinals", "/images/small/DeAndreHopkins.jpg",
+                    "/images/large/DeAndreHopkins.jpg", "WR", 147.2, 234.13),
+            new Player("Ja'Marr Chase", "Cincinnati Bengals", "/images/small/JaMarrChase.jpg",
+                    "/images/large/JaMarrChase.jpg", "WR", 304.6, 287.47)
     };
 
     Player[] TE = new Player[] {
-        new Player("Cole Kmet", "Chicago Bears", "/images/small/ColeKmet.jpg",
-              "/images/large/ColeKmet.jpg", "TE", 121.2, 136.59),
-        new Player("Travis Kelce", "Kansas City Chiefs", "/images/small/TravisKelce.jpg",
-              "/images/large/TravisKelce.jpg", "TE", 262.8, 240.65),
-        new Player("Darren Waller", "Las Vegas Raiders", "/images/small/DarrenWaller.jpg",
-              "/images/large/DarrenWaller.jpg", "TE", 133.5, 195.33),
-        new Player("George Kittle", "San Francisco 49ers", "/images/small/GeorgeKittle.jpg",
-              "/images/large/GeorgeKittle.jpg", "TE", 198.0, 181.57),
-        new Player("Mark Andrews", "Baltimore Ravens", "/images/small/MarkAndrews.jpg",
-              "/images/large/MarkAndrews.jpg", "TE", 301.1, 254.12)
+            new Player("Cole Kmet", "Chicago Bears", "/images/small/ColeKmet.jpg",
+                    "/images/large/ColeKmet.jpg", "TE", 121.2, 136.59),
+            new Player("Travis Kelce", "Kansas City Chiefs", "/images/small/TravisKelce.jpg",
+                    "/images/large/TravisKelce.jpg", "TE", 262.8, 240.65),
+            new Player("Darren Waller", "Las Vegas Raiders", "/images/small/DarrenWaller.jpg",
+                    "/images/large/DarrenWaller.jpg", "TE", 133.5, 195.33),
+            new Player("George Kittle", "San Francisco 49ers", "/images/small/GeorgeKittle.jpg",
+                    "/images/large/GeorgeKittle.jpg", "TE", 198.0, 181.57),
+            new Player("Mark Andrews", "Baltimore Ravens", "/images/small/MarkAndrews.jpg",
+                    "/images/large/MarkAndrews.jpg", "TE", 301.1, 254.12)
     };
 
     Player[] K = new Player[] {
-        new Player("Cairo Santos", "Chicago Bears", "/images/small/CairoSantos.jpg",
-              "/images/large/CairoSantos.jpg", "K", 112.0, 123.64),
-        new Player("Justin Tucker", "Baltimore Ravens", "/images/small/JustinTucker.jpg",
-              "/images/large/JustinTucker.jpg", "K", 161.0, 140.14),
-        new Player("Jason Sanders", "Miami Dolphins", "/images/small/JasonSanders.jpg",
-              "/images/large/JasonSanders.jpg", "K", 107.0, 109.77),
-        new Player("Harrison Butker", "Kansas City Chiefs", "/images/small/HarrisonButker.jpg",
-              "/images/large/HarrisonButker.jpg", "K", 137.0, 145.51),
-        new Player("Robbie Gould", "San Francisco 49ers", "/images/small/RobbieGould.jpg",
-              "/images/large/RobbieGould.jpg", "K", 109.0, 130.86)
+            new Player("Cairo Santos", "Chicago Bears", "/images/small/CairoSantos.jpg",
+                    "/images/large/CairoSantos.jpg", "K", 112.0, 123.64),
+            new Player("Justin Tucker", "Baltimore Ravens", "/images/small/JustinTucker.jpg",
+                    "/images/large/JustinTucker.jpg", "K", 161.0, 140.14),
+            new Player("Jason Sanders", "Miami Dolphins", "/images/small/JasonSanders.jpg",
+                    "/images/large/JasonSanders.jpg", "K", 107.0, 109.77),
+            new Player("Harrison Butker", "Kansas City Chiefs", "/images/small/HarrisonButker.jpg",
+                    "/images/large/HarrisonButker.jpg", "K", 137.0, 145.51),
+            new Player("Robbie Gould", "San Francisco 49ers", "/images/small/RobbieGould.jpg",
+                    "/images/large/RobbieGould.jpg", "K", 109.0, 130.86)
     };
 
     Player[] Def = new Player[] {
-        new Player("Chicago Bears", "Chicago Bears", "/images/small/ChicagoBears.jpg",
-                "/images/large/ChicagoBears.jpg", "Def", 105.0, 90.8),
-        new Player("Carolina Panthers", "Carolina Panthers", "/images/small/CarolinaPanthers.png",
-                "/images/large/CarolinaPanthers.png", "Def", 88.0, 99.69),
-        new Player("Houston Texans", "Houston Texans", "/images/small/HoustonTexans.jpg",
-                "/images/large/HoustonTexans.jpg", "Def", 58.0, 56.35),
-        new Player("Los Angeles Rams", "Los Angeles Rams", "/images/small/LARams.jpg",
-                "/images/large/LARams.jpg", "Def", 105.0, 94.1),
-        new Player("BuffaloBills", "Buffalo Bills", "/images/small/BuffaloBills.jpg",
-                "/images/large/BuffaloBills.jpg", "Def", 154.0, 129.83)
+            new Player("Chicago Bears", "Chicago Bears", "/images/small/ChicagoBears.jpg",
+                    "/images/large/ChicagoBears.jpg", "Def", 105.0, 90.8),
+            new Player("Carolina Panthers", "Carolina Panthers", "/images/small/CarolinaPanthers.png",
+                    "/images/large/CarolinaPanthers.png", "Def", 88.0, 99.69),
+            new Player("Houston Texans", "Houston Texans", "/images/small/HoustonTexans.jpg",
+                    "/images/large/HoustonTexans.jpg", "Def", 58.0, 56.35),
+            new Player("Los Angeles Rams", "Los Angeles Rams", "/images/small/LARams.jpg",
+                    "/images/large/LARams.jpg", "Def", 105.0, 94.1),
+            new Player("BuffaloBills", "Buffalo Bills", "/images/small/BuffaloBills.jpg",
+                    "/images/large/BuffaloBills.jpg", "Def", 154.0, 129.83)
     };
 
     @FXML

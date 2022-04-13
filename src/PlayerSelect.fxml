@@ -13,171 +13,171 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PlayerSelectController">
-   <center>
-      <ImageView fx:id="playerImageView" fitHeight="480.0" fitWidth="370.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
-   </center>
-   <padding>
-      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
-   </padding>
-   <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#qbButtonPress" prefHeight="75.0" prefWidth="150.0" text="QB" textAlignment="CENTER">
-               <font>
-                  <Font name="Comic Sans MS" size="18.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </padding>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rbButtonPress" prefHeight="75.0" prefWidth="150.0" text="WR" textAlignment="CENTER">
-               <font>
-                  <Font name="Comic Sans MS" size="18.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </padding>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#wrButtonPress" prefHeight="75.0" prefWidth="150.0" text="WR" textAlignment="CENTER">
-               <font>
-                  <Font name="Comic Sans MS" size="18.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </padding>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#teButtonPress" prefHeight="75.0" prefWidth="150.0" text="TE" textAlignment="CENTER">
-               <font>
-                  <Font name="Comic Sans MS" size="18.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </padding>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#kButtonPress" prefHeight="75.0" prefWidth="150.0" text="K" textAlignment="CENTER">
-               <font>
-                  <Font name="Comic Sans MS" size="18.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </padding>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#defButtonPress" prefHeight="75.0" prefWidth="150.0" text="DEF/ST" textAlignment="CENTER">
-               <font>
-                  <Font name="Comic Sans MS" size="18.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </padding>
-            </Button>
-         </children>
-      </HBox>
-   </top>
-   <left>
-      <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="300.0" BorderPane.alignment="CENTER">
-        <panes>
-          <TitledPane animated="false" text="Available Players">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ListView fx:id="playerListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
-                           <padding>
-                              <Insets right="10.0" />
-                           </padding>
-                        </ListView>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" text="My Team">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ListView fx:id="teamListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
-                           <padding>
-                              <Insets right="10.0" />
-                           </padding>
-                        </ListView>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </TitledPane>
-        </panes>
-         <padding>
-            <Insets right="8.0" />
-         </padding>
-      </Accordion>
-   </left>
-   <right>
-      <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="300.0" BorderPane.alignment="CENTER">
-        <panes>
-          <TitledPane animated="false" text="Player Stats">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <TextArea fx:id="playerStats" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
-                           <padding>
-                              <Insets right="10.0" />
-                           </padding>
-                           <font>
-                              <Font name="Comic Sans MS Bold Italic" size="14.0" />
-                           </font>
-                        </TextArea>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" text="My Team">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <TextArea fx:id="myTeam" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
-                           <padding>
-                              <Insets right="10.0" />
-                           </padding>
-                           <font>
-                              <Font name="Comic Sans MS Bold Italic" size="14.0" />
-                           </font>
-                        </TextArea>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </TitledPane>
-        </panes>
-         <padding>
-            <Insets left="8.0" />
-         </padding>
-      </Accordion>
-   </right>
-   <bottom>
-      <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectPlayerButtonPress" prefWidth="300.0" text="Select Player" textAlignment="CENTER" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="Comic Sans MS" size="18.0" />
-         </font>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-         <BorderPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
-         </BorderPane.margin>
-      </Button>
-   </bottom>
+    <center>
+        <ImageView fx:id="playerImageView" fitHeight="480.0" fitWidth="370.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+    </center>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+    <top>
+        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#qbButtonPress" prefHeight="75.0" prefWidth="150.0" text="QB" textAlignment="CENTER">
+                    <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rbButtonPress" prefHeight="75.0" prefWidth="150.0" text="RB" textAlignment="CENTER">
+                    <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#wrButtonPress" prefHeight="75.0" prefWidth="150.0" text="WR" textAlignment="CENTER">
+                    <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#teButtonPress" prefHeight="75.0" prefWidth="150.0" text="TE" textAlignment="CENTER">
+                    <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#kButtonPress" prefHeight="75.0" prefWidth="150.0" text="K" textAlignment="CENTER">
+                    <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#defButtonPress" prefHeight="75.0" prefWidth="150.0" text="DEF/ST" textAlignment="CENTER">
+                    <font>
+                        <Font name="Comic Sans MS" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                </Button>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <panes>
+                <TitledPane animated="false" text="Available Players">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="playerListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
+                                    <padding>
+                                        <Insets right="10.0" />
+                                    </padding>
+                                </ListView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="My Team">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="teamListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
+                                    <padding>
+                                        <Insets right="10.0" />
+                                    </padding>
+                                </ListView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </panes>
+            <padding>
+                <Insets right="8.0" />
+            </padding>
+        </Accordion>
+    </left>
+    <right>
+        <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <panes>
+                <TitledPane animated="false" text="Player Stats">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextArea fx:id="playerStats" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
+                                    <padding>
+                                        <Insets right="10.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="Comic Sans MS Bold Italic" size="14.0" />
+                                    </font>
+                                </TextArea>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="My Team">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextArea fx:id="myTeam" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
+                                    <padding>
+                                        <Insets right="10.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="Comic Sans MS Bold Italic" size="14.0" />
+                                    </font>
+                                </TextArea>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </panes>
+            <padding>
+                <Insets left="8.0" />
+            </padding>
+        </Accordion>
+    </right>
+    <bottom>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectPlayerButtonPress" prefWidth="300.0" text="Select Player" textAlignment="CENTER" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Comic Sans MS" size="18.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+            </BorderPane.margin>
+        </Button>
+    </bottom>
 </BorderPane>

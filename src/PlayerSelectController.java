@@ -148,6 +148,10 @@ public class PlayerSelectController {
     void selectPlayerButtonPress(ActionEvent event) {
         Player[] tmpQB = new Player[QB.length - 1];
         Player[] tmpRB = new Player[RB.length - 1];
+        Player[] tmpWR = new Player[WR.length - 1];
+        Player[] tmpTE = new Player[TE.length - 1];
+        Player[] tmpK = new Player[K.length - 1];
+        Player[] tmpDef = new Player[Def.length - 1];
 
         team.add(playerListView.getSelectionModel().getSelectedItem());
         teamListView.setItems(team);
@@ -177,7 +181,57 @@ public class PlayerSelectController {
             }
             RB = tmpRB;
         }
+
+        if (Objects.equals(position, "WR")) {
+            int j = 0;
+            for (Player value : WR) {
+                if (Objects.equals(name, value.getPlayer())) {
+                    ;
+                } else {
+                    tmpWR[j++] = value;
+                }
+            }
+            WR = tmpWR;
+        }
+
+        if (Objects.equals(position, "TE")) {
+            int j = 0;
+            for (Player value : TE) {
+                if (Objects.equals(name, value.getPlayer())) {
+                    ;
+                } else {
+                    tmpTE[j++] = value;
+                }
+            }
+            TE = tmpTE;
+        }
+
+        if (Objects.equals(position, "K")) {
+            int j = 0;
+            for (Player value : K) {
+                if (Objects.equals(name, value.getPlayer())) {
+                    ;
+                } else {
+                    tmpK[j++] = value;
+                }
+            }
+            K = tmpK;
+        }
+
+        if (Objects.equals(position, "Def")) {
+            int j = 0;
+            for (Player value : Def) {
+                if (Objects.equals(name, value.getPlayer())) {
+                    ;
+                } else {
+                    tmpDef[j++] = value;
+                }
+            }
+            Def = tmpDef;
+        }
+
         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+        playerListView.getItems().clear();
 
     }
 

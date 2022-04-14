@@ -285,6 +285,7 @@ public class PlayerSelectController {
                 }
                 Def = tmpDef;
             }
+
             if (qbNum == 1 && rbNum == 2 && wrNum == 2 && teNum == 1 && flexNum == 1 && kNum == 1 && defNum == 1) {
                 playerImageView.setImage(new Image("images/large/Trophy.jpg"));
                 playerStats.setText("TEAM COMPLETE! CONGRATS!!!");

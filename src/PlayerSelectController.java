@@ -30,6 +30,7 @@ public class PlayerSelectController {
     // stores the list of Player Objects
     private final ObservableList<Player> player = FXCollections.observableArrayList();
     private final ObservableList<Player> team = FXCollections.observableArrayList();
+    DisplayTeam displayTeam = new DisplayTeam();
 
     Player[] QB = new Player[] {
         new QB("Justin Fields", "Chicago Bears", "/images/small/JustinFields.jpg",
@@ -144,6 +145,14 @@ public class PlayerSelectController {
                     "/images/large/BuffaloBills.jpg", "Def", 154.0, 129.83)
     };
 
+    int rbNum = 0;
+    int qbNum = 0;
+    int wrNum = 0;
+    int teNum = 0;
+    int kNum = 0;
+    int defNum = 0;
+    int flexNum = 0;
+
     @FXML
     void selectPlayerButtonPress(ActionEvent event) {
         Player[] tmpQB = new Player[QB.length - 1];
@@ -153,85 +162,139 @@ public class PlayerSelectController {
         Player[] tmpK = new Player[K.length - 1];
         Player[] tmpDef = new Player[Def.length - 1];
 
-        team.add(playerListView.getSelectionModel().getSelectedItem());
-        teamListView.setItems(team);
         String name = playerListView.getSelectionModel().getSelectedItem().getPlayer();
         String position = playerListView.getSelectionModel().getSelectedItem().getPosition();
 
-        if (Objects.equals(position, "QB")) {
-            int j = 0;
-            for (Player value : QB) {
-                if (Objects.equals(name, value.getPlayer())) {
-                    ;
-                } else {
-                    tmpQB[j++] = value;
+        try{
+            if (Objects.equals(position, "QB")) {
+                int j = 0;
+                for (Player value : QB) {
+                    if (Objects.equals(name, value.getPlayer()) && qbNum < 1) {
+                        team.add(playerListView.getSelectionModel().getSelectedItem());
+                        teamListView.setItems(team);
+                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+                        displayTeam.setQB(name);
+                        qbNum++;
+                    } else {
+                        tmpQB[j++] = value;
+                    }
                 }
+                QB = tmpQB;
             }
-            QB = tmpQB;
+
+            if (Objects.equals(position, "RB")) {
+                int j = 0;
+                for (Player value : RB) {
+                    if (Objects.equals(name, value.getPlayer()) && rbNum < 2) {
+                        team.add(playerListView.getSelectionModel().getSelectedItem());
+                        teamListView.setItems(team);
+                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+                        if(rbNum <1) {
+                            displayTeam.setRB1(name);
+                        } else {
+                            displayTeam.setRB2(name);
+                        }
+                        rbNum++;
+                    } else if (Objects.equals(name, value.getPlayer()) && flexNum < 1) {
+                        team.add(playerListView.getSelectionModel().getSelectedItem());
+                        teamListView.setItems(team);
+                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+                        displayTeam.setFLEX(name);
+                        flexNum++;
+                    } else {
+                        tmpRB[j++] = value;
+                    }
+                }
+                RB = tmpRB;
+            }
+
+            if (Objects.equals(position, "WR")) {
+                int j = 0;
+                for (Player value : WR) {
+                    if (Objects.equals(name, value.getPlayer()) && wrNum < 2) {
+                        team.add(playerListView.getSelectionModel().getSelectedItem());
+                        teamListView.setItems(team);
+                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+                        if(wrNum <1) {
+                            displayTeam.setWR1(name);
+                        } else {
+                            displayTeam.setWR2(name);
+                        }
+                        wrNum++;
+                    } else if (Objects.equals(name, value.getPlayer()) && flexNum < 1) {
+                        team.add(playerListView.getSelectionModel().getSelectedItem());
+                        teamListView.setItems(team);
+                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+                        displayTeam.setFLEX(name);
+                        flexNum++;
+                    } else {
+                        tmpWR[j++] = value;
+                    }
+                }
+                WR = tmpWR;
+            }
+
+            if (Objects.equals(position, "TE")) {
+                int j = 0;
+                for (Player value : TE) {
+                    if (Objects.equals(name, value.getPlayer()) && teNum < 1) {
+                        team.add(playerListView.getSelectionModel().getSelectedItem());
+                        teamListView.setItems(team);
+                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+                        displayTeam.setTE(name);
+                        teNum++;
+                    } else if (Objects.equals(name, value.getPlayer()) && flexNum < 1) {
+                        team.add(playerListView.getSelectionModel().getSelectedItem());
+                        teamListView.setItems(team);
+                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+                        displayTeam.setFLEX(name);
+                        flexNum++;
+                    } else {
+                        tmpTE[j++] = value;
+                    }
+                }
+                TE = tmpTE;
+            }
+
+            if (Objects.equals(position, "K")) {
+                int j = 0;
+                for (Player value : K) {
+                    if (Objects.equals(name, value.getPlayer()) && kNum < 1) {
+                        team.add(playerListView.getSelectionModel().getSelectedItem());
+                        teamListView.setItems(team);
+                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+                        displayTeam.setK(name);
+                        kNum++;
+                    } else {
+                        tmpK[j++] = value;
+                    }
+                }
+                K = tmpK;
+            }
+
+            if (Objects.equals(position, "Def") && defNum < 1) {
+                int j = 0;
+                for (Player value : Def) {
+                    if (Objects.equals(name, value.getPlayer())) {
+                        team.add(playerListView.getSelectionModel().getSelectedItem());
+                        teamListView.setItems(team);
+                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
+                        displayTeam.setDEF(name);
+                        defNum++;
+                    } else {
+                        tmpDef[j++] = value;
+                    }
+                }
+                Def = tmpDef;
+            }
+        }catch(ArrayIndexOutOfBoundsException outOfBoundsException) {
+            playerListView.getItems().clear();
+            playerImageView.setImage(new Image("images/large/RedX.jpg"));
+            playerStats.setText("That Position is Full, Try Again!");
         }
 
-        if (Objects.equals(position, "RB")) {
-            int j = 0;
-            for (Player value : RB) {
-                if (Objects.equals(name, value.getPlayer())) {
-                    ;
-                } else {
-                    tmpRB[j++] = value;
-                }
-            }
-            RB = tmpRB;
-        }
-
-        if (Objects.equals(position, "WR")) {
-            int j = 0;
-            for (Player value : WR) {
-                if (Objects.equals(name, value.getPlayer())) {
-                    ;
-                } else {
-                    tmpWR[j++] = value;
-                }
-            }
-            WR = tmpWR;
-        }
-
-        if (Objects.equals(position, "TE")) {
-            int j = 0;
-            for (Player value : TE) {
-                if (Objects.equals(name, value.getPlayer())) {
-                    ;
-                } else {
-                    tmpTE[j++] = value;
-                }
-            }
-            TE = tmpTE;
-        }
-
-        if (Objects.equals(position, "K")) {
-            int j = 0;
-            for (Player value : K) {
-                if (Objects.equals(name, value.getPlayer())) {
-                    ;
-                } else {
-                    tmpK[j++] = value;
-                }
-            }
-            K = tmpK;
-        }
-
-        if (Objects.equals(position, "Def")) {
-            int j = 0;
-            for (Player value : Def) {
-                if (Objects.equals(name, value.getPlayer())) {
-                    ;
-                } else {
-                    tmpDef[j++] = value;
-                }
-            }
-            Def = tmpDef;
-        }
-
-        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
         playerListView.getItems().clear();
+        myTeam.setText(displayTeam.toString());
 
     }
 

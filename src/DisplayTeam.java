@@ -1,4 +1,5 @@
 public class DisplayTeam {
+    private String teamName;
     private String QB;
     private String RB1;
     private String RB2;
@@ -11,6 +12,7 @@ public class DisplayTeam {
 
     public DisplayTeam() {}
 
+    public void setTeamName(String teamName) {this.teamName = teamName;}
     public void setQB(String QB) {this.QB = QB;}
     public void setRB1(String RB1) {this.RB1 = RB1;}
     public void setRB2(String RB2) {this.RB2 = RB2;}
@@ -21,6 +23,7 @@ public class DisplayTeam {
     public void setK(String K) {this.K = K;}
     public void setDEF(String DEF) {this.DEF = DEF;}
 
+    public String getTeamName() {return teamName;}
     public String getQB() {return QB;}
     public String getRB1() {return RB1;}
     public String getRB2() {return RB2;}
@@ -33,7 +36,8 @@ public class DisplayTeam {
 
     @Override
     public String toString() {
-        return String.format("%n%n%-19s%s%n%-20s%s%n%-20s%s%n%-19s%s%n%-19s%s%n%-21s%s%n%-21s%s%n%-22s%s%n%-19s%s%n",
+        return String.format("%n%s%n%n%-19s%s%n%-20s%s%n%-20s%s%n%-19s%s%n%-19s%s%n%-21s%s%n%-21s%s%n%-22s%s%n%-19s%s%n",
+                teamName,
                 "Quarterback: ", QB,
                 "Running Back 1: ", RB1,
                 "Running Back 2: ", RB2,

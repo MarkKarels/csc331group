@@ -16,6 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import java.util.Collections;
 import java.util.Objects;
+import javafx.scene.control.TextField;
 
 
 public class PlayerSelectController {
@@ -25,6 +26,7 @@ public class PlayerSelectController {
     @FXML private ImageView playerImageView;
     @FXML private TextArea myTeam;
     @FXML private TextArea playerStats;
+    @FXML private TextField teamNameText;
     // stores the list of Player Objects
     private final ObservableList<Player> player = FXCollections.observableArrayList();
     private final ObservableList<Player> team = FXCollections.observableArrayList();
@@ -45,7 +47,22 @@ public class PlayerSelectController {
               4683.0, 35, 12, 64, 395.0, 3),
         new QB("Justin Herbert", "Los Angeles Chargers", "/images/small/JustinHerbert.jpg",
               "/images/large/JustinHerbert.jpg", "QB", 380.76, 329.13, 4338.0,
-              33, 12, 60, 285, 3)
+              33, 12, 60, 285, 3),
+        new QB("Aaron Rodgers", "Green Bay Packers", "/images/small/AaronRodgers.jpg",
+              "/images/large/AaronRodgers.jpg", "QB", 333.3, 309.1, 4088.0,
+              35, 7, 37, 131, 2),
+        new QB("Josh Allen", "Buffalo Bills", "/images/small/JoshAllen.jpg",
+              "/images/large/JoshAllen.jpg", "QB", 402.58, 375.29, 4113.0,
+                35, 12, 64, 395, 3),
+        new QB("Joe Burrow", "Cincinnati Bengals", "/images/small/JoeBurrow.jpg",
+              "/images/large/JoeBurrow.jpg", "QB", 314.24, 298.53, 4208.0,
+                31, 12, 52, 158, 3),
+        new QB("Russell Wilson", "Denver Broncos", "/images/small/RussellWilson.jpg",
+              "/images/large/RussellWilson.jpg", "QB", 242.82, 302.17, 4132,
+                30, 10, 65, 287, 2),
+        new QB("Matthew Stafford", "Los Angeles Rams", "/images/small/MatthewStafford.jpg",
+              "/images/large/MatthewStafford.jpg", "QB", 329.74, 286.96, 4366.0,
+                32, 14, 36, 64, 2)
     };
 
     Player[] RB = new Player[] {
@@ -150,6 +167,13 @@ public class PlayerSelectController {
     int kNum = 0;
     int defNum = 0;
     int flexNum = 0;
+
+    @FXML
+    void teamNameCommit(ActionEvent event) {
+        displayTeam.setTeamName(teamNameText.getText());
+        teamNameText.clear();
+        myTeam.setText(displayTeam.toString());
+    }
 
     @FXML
     void selectPlayerButtonPress(ActionEvent event) {
@@ -296,7 +320,8 @@ public class PlayerSelectController {
             playerImageView.setImage(new Image("images/large/RedX.jpg"));
             playerStats.setText("That Position is Full, Try Again!");
             myTeam.setText("That Position is Full, Try Again!");
-        }
+        }catch(Exception ignored) {;};
+
 
         playerListView.getItems().clear();
         myTeam.setText(displayTeam.toString());
@@ -361,9 +386,7 @@ public class PlayerSelectController {
                         try {
                             playerImageView.setImage(new Image(newValue.getLargeImage()));
                             playerStats.setText(newValue.toString());
-                        } catch(NullPointerException ignored) {
-                            ;
-                        }
+                        } catch(Exception ignored) {;}
                     }
                 }
         );
@@ -375,9 +398,7 @@ public class PlayerSelectController {
                         try {
                             playerImageView.setImage(new Image(newValue.getLargeImage()));
                             playerStats.setText(newValue.toString());
-                        } catch(NullPointerException ignored) {
-                            ;
-                        }
+                        } catch(Exception ignored) {;}
                     }
                 }
         );

@@ -10,6 +10,7 @@ public class DisplayTeam {
     private String K;
     private String DEF;
 
+    // Initial value for String variables must be null
     public DisplayTeam() {}
 
     public void setTeamName(String teamName) {this.teamName = teamName;}

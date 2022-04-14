@@ -289,14 +289,14 @@ public class PlayerSelectController {
             }
             if (qbNum == 1 && rbNum == 2 && wrNum == 2 && teNum == 1 && flexNum == 1 && kNum == 1 && defNum == 1) {
                 playerImageView.setImage(new Image("images/large/Trophy.jpg"));
-                playerStats.setText("%n%n%nTEAM COMPLETE! CONGRATS!!!");
+                playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
 
             }
         }catch(ArrayIndexOutOfBoundsException outOfBoundsException) {
             playerListView.getItems().clear();
             playerImageView.setImage(new Image("images/large/RedX.jpg"));
-            playerStats.setText("%n%n%nThat Position is Full, Try Again!");
-            myTeam.setText("%n%n%nThat Position is Full, Try Again!");
+            playerStats.setText("That Position is Full, Try Again!");
+            myTeam.setText("That Position is Full, Try Again!");
         }
 
         playerListView.getItems().clear();

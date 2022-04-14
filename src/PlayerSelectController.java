@@ -14,9 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.util.Callback;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Arrays;
 import java.util.Objects;
 
 

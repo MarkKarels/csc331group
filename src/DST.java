@@ -14,7 +14,7 @@ public class DST extends Flex {
     // constructor
     public DST(
                int sacks, int interceptions, int fumbleRecover, int totalTDs, int pointsAgainst, double yardsAgainst) {
-        //super(player, team, thumbImage, largeImage, position);
+        //super();
         this.sacks = sacks;
         this.interceptions = interceptions;
         this.fumbleRecover = fumbleRecover;

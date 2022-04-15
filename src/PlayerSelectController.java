@@ -148,16 +148,21 @@ public class PlayerSelectController {
     };
 
     Player[] Def = new Player[] {
-            new Player("Chicago Bears", "Chicago Bears", "/images/small/ChicagoBears.jpg",
-                    "/images/large/ChicagoBears.jpg", "Def", 105.0, 90.8),
-            new Player("Carolina Panthers", "Carolina Panthers", "/images/small/CarolinaPanthers.png",
-                    "/images/large/CarolinaPanthers.png", "Def", 88.0, 99.69),
-            new Player("Houston Texans", "Houston Texans", "/images/small/HoustonTexans.jpg",
-                    "/images/large/HoustonTexans.jpg", "Def", 58.0, 56.35),
-            new Player("Los Angeles Rams", "Los Angeles Rams", "/images/small/LARams.jpg",
-                    "/images/large/LARams.jpg", "Def", 105.0, 94.1),
-            new Player("BuffaloBills", "Buffalo Bills", "/images/small/BuffaloBills.jpg",
-                    "/images/large/BuffaloBills.jpg", "Def", 154.0, 129.83)
+            new Def("Chicago Bears", "Chicago Bears", "/images/small/ChicagoBears.jpg",
+                    "/images/large/ChicagoBears.jpg", "Def", 105.0, 90.8, 39,
+                    11, 9, 2, 418, 5843.0),
+            new Def("Carolina Panthers", "Carolina Panthers", "/images/small/CarolinaPanthers.png",
+                    "/images/large/CarolinaPanthers.png", "Def", 88.0, 99.69, 40, 13,
+                    8, 2, 405, 5822.0),
+            new Def("Houston Texans", "Houston Texans", "/images/small/HoustonTexans.jpg",
+                    "/images/large/HoustonTexans.jpg", "Def", 58.0, 56.35, 39,
+                    12, 6, 3, 422, 6025.0),
+            new Def("Los Angeles Rams", "Los Angeles Rams", "/images/small/LARams.jpg",
+                    "/images/large/LARams.jpg", "Def", 105.0, 94.1, 42,
+                    14, 8, 2, 372, 5971.0),
+            new Def("BuffaloBills", "Buffalo Bills", "/images/small/BuffaloBills.jpg",
+                    "/images/large/BuffaloBills.jpg", "Def", 154.0, 129.83, 44,
+                    14, 8, 2, 340, 5755.0)
     };
 
     int rbNum = 0;

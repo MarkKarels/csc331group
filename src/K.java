@@ -38,7 +38,7 @@ public class K extends Player{
     @Override
     public String toString() {
         return String.format("%n%s%n%s%n%s%nMade 1-39 Yards: %d%nMade 40-49 Yards: %d%nMade 50+ Yards: %d%nTotal Attempts: %d%n Total Made: %d%nExtra point attempts: %d%nExtra points made: %d",
-                getPosition(), getPlayer(), getTeam(),this.made1to39, this.made40to49, this.made50plus, this.totalAttempt, this.totalMade, this.xpAttempt, this,xpMade);
+                getPosition(), getPlayer(), getTeam(),this.made1to39, this.made40to49, this.made50plus, this.totalAttempt, this.totalMade, this.xpAttempt, this.xpMade);
     }
 
 }

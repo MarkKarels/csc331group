@@ -35,6 +35,10 @@ public class PlayerSelectController {
     DisplayTeam displayTeam = new DisplayTeam();
     DisplayTeam autoTeam1 = new DisplayTeam();
     DisplayTeam autoTeam2 = new DisplayTeam();
+    String[] mysteryNames1 = {"Run CMC", "Yippe Kai-Yay Justin Tucker", "Rolling with Mahomes", "Stuck in the End Zone",
+    "Punt Intended", "My Kupp Runneth Over", "Davante's Inferno", "The Real Slim Brady", "Kmet the Frog", "Riding in my Lambeau"};
+    String[] mysteryNames2 = {"RussellMania", "Legion of Boom", "Too Many Cooks", "Tua Legit Tua Quit", "Matty Ice and Easy",
+    "Quarantine Salvation", "Play At Home Order", "Cobra Ky-ler", "Judge Jeudy", "High Wattage"};
 
     Player[] QB = new Player[] {
         new QB("Justin Fields", "Chicago Bears", "/images/small/JustinFields.jpg",
@@ -275,11 +279,14 @@ public class PlayerSelectController {
 
     @FXML
     void teamNameCommit(ActionEvent event) {
+        int mysteryNum1 = (int)(Math.floor(Math.random() * 10));
+        int mysteryNum2 = (int)(Math.floor(Math.random() * 10));
+
         displayTeam.setTeamName(teamNameText.getText());
         teamNameText.clear();
         myTeam.setText(displayTeam.toString());
-        autoTeam1.setTeamName("Run CMC");
-        autoTeam2.setTeamName("Never Say Never");
+        autoTeam1.setTeamName(mysteryNames1[mysteryNum1]);
+        autoTeam2.setTeamName(mysteryNames2[mysteryNum2]);
         mysteryTeam1.setText(autoTeam1.toString());
         mysteryTeam2.setText(autoTeam2.toString());
     }

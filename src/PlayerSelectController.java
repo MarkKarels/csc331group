@@ -317,7 +317,7 @@ public class PlayerSelectController {
                 QB = tmpQB;
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
-                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                    playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
                 }
             }
             else if (Objects.equals(position, "RB")) {
@@ -344,7 +344,7 @@ public class PlayerSelectController {
                 RB = tmpRB;
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
-                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                    playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
                 }
             }
             else if (Objects.equals(position, "WR")) {
@@ -371,7 +371,7 @@ public class PlayerSelectController {
                 WR = tmpWR;
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
-                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                    playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
                 }
             }
             else if (Objects.equals(position, "TE")) {
@@ -394,7 +394,7 @@ public class PlayerSelectController {
                 TE = tmpTE;
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
-                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                    playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
                 }
             }
             else if (Objects.equals(position, "K")) {
@@ -411,7 +411,7 @@ public class PlayerSelectController {
                 K = tmpK;
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
-                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                    playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
                 }
             }
             else if (Objects.equals(position, "Def") && defNum < 1) {
@@ -428,7 +428,7 @@ public class PlayerSelectController {
                 Def = tmpDef;
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
-                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                    playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
                 }
             }
             // Auto Draft
@@ -628,7 +628,7 @@ public class PlayerSelectController {
 
         if (team.toArray().length == 9) {
             playerImageView.setImage(new Image("images/large/Trophy.jpg"));
-            playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+            playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
         }
         playerListView.getItems().clear();
         myTeam.setText(displayTeam.toString());

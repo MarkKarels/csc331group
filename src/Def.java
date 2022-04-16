@@ -1,9 +1,9 @@
-public class Def extends Player{
-    /**
-     * Goto https://fantasy.espn.com/football/players/projections for player stats
-     */
-    // instance variables
+/**
+ * Goto https://fantasy.espn.com/football/players/projections for player stats
+ */
 
+public class Def extends Player{
+    // instance variables
     private int sacks;
     private int interceptions;
     private int fumbleRecover;
@@ -27,21 +27,16 @@ public class Def extends Player{
     public void setSacks(int sacks) {
         this.sacks = sacks;
     }
-
     public void setInterceptions(int interceptions) {
         this.interceptions = interceptions;
     }
-
     public void setFumbleRecover(int fumbleRecover) {
         this.fumbleRecover = fumbleRecover;
     }
-
     public void setTotalTDs(int totalTDs) {this.totalTDs = totalTDs;}
-
     public void setPointsAgainst(int pointsAgainst) {
         this.pointsAgainst = pointsAgainst;
     }
-
     public void setAvgYDsPerCatch(double yardsAgainst) {
         this.yardsAgainst = yardsAgainst;
     }
@@ -50,31 +45,35 @@ public class Def extends Player{
     public int getSacks() {
         return sacks;
     }
-
     public int getInterceptions() {
         return interceptions;
     }
-
     public int getFumbleRecover() {
         return fumbleRecover;
     }
-
     public int getTotalTDs() {
         return totalTDs;
     }
-
     public int getPointsAgainst() {
         return pointsAgainst;
     }
-
     public double getAvgYDsPerCatch() {
         return yardsAgainst;
     }
 
     @Override
     public String toString() {
-        return String.format("%n%s%n%s%n%s%n%nSacks: %d%nInterceptions: %d%nFumble Recoveries: %d%nTotal Touchdowns: %d%n Points Against: %d%nYards Against: %.2f",
-                getPosition(), getPlayer(), getTeam(),this.sacks, this.interceptions, this.fumbleRecover, this.totalTDs, this.pointsAgainst, this.yardsAgainst);
+        return String.format("%n%s%n%s%n%s%n%n%-30s%,.1f%n%n%28s%n%-32s%,.1f%n%-31s%d%n%-31s%d%n%-29s%d%n%-29s%d%n%-31s%d%n%-30s%,.1f",
+                getPosition(),
+                getPlayer(), getTeam(),
+                "2021 Total Points: ", getPrevPoints(),
+                "2022 Projected",
+                "Points: ", getProjPoints(),
+                "Sacks: ", sacks,
+                "Interceptions: ", interceptions,
+                "Fumble Recoveries: ", fumbleRecover,
+                "Total Touchdowns: ", totalTDs,
+                "Points Against: ", pointsAgainst,
+                "Yards Against: ", yardsAgainst);
     }
-
 }

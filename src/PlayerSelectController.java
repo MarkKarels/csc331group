@@ -165,16 +165,21 @@ public class PlayerSelectController {
     };
 
     Player[] K = new Player[] {
-            new Player("Cairo Santos", "Chicago Bears", "/images/small/CairoSantos.jpg",
-                    "/images/large/CairoSantos.jpg", "K", 112.0, 123.64),
-            new Player("Justin Tucker", "Baltimore Ravens", "/images/small/JustinTucker.jpg",
-                    "/images/large/JustinTucker.jpg", "K", 161.0, 140.14),
-            new Player("Jason Sanders", "Miami Dolphins", "/images/small/JasonSanders.jpg",
-                    "/images/large/JasonSanders.jpg", "K", 107.0, 109.77),
-            new Player("Harrison Butker", "Kansas City Chiefs", "/images/small/HarrisonButker.jpg",
-                    "/images/large/HarrisonButker.jpg", "K", 137.0, 145.51),
-            new Player("Robbie Gould", "San Francisco 49ers", "/images/small/RobbieGould.jpg",
-                    "/images/large/RobbieGould.jpg", "K", 109.0, 130.86)
+            new K("Cairo Santos", "Chicago Bears", "/images/small/CairoSantos.jpg",
+                    "/images/large/CairoSantos.jpg", "K", 112.0, 123.64, 16,
+                    8, 3, 33, 28, 33, 31),
+            new K("Justin Tucker", "Baltimore Ravens", "/images/small/JustinTucker.jpg",
+                    "/images/large/JustinTucker.jpg", "K", 161.0, 140.14, 17,
+                    8, 3, 32, 28, 51, 50),
+            new K("Jason Sanders", "Miami Dolphins", "/images/small/JasonSanders.jpg",
+                    "/images/large/JasonSanders.jpg", "K", 107.0, 109.77, 13,
+                    6, 3, 27, 22, 41, 38),
+            new K("Harrison Butker", "Kansas City Chiefs", "/images/small/HarrisonButker.jpg",
+                    "/images/large/HarrisonButker.jpg", "K", 137.0, 145.51, 17,
+                    8, 3, 32, 28, 51, 50),
+            new K("Robbie Gould", "San Francisco 49ers", "/images/small/RobbieGould.jpg",
+                    "/images/large/RobbieGould.jpg", "K", 109.0, 130.86, 16,
+                    8, 3, 32, 27, 41, 39)
     };
 
     Player[] Def = new Player[] {

@@ -21,7 +21,7 @@ public class RB extends Flex{
 
     @Override
     public String toString() {
-        return String.format("%s%n%-30s%d%n%-27s%,.1f%n",
+        return String.format("%s%-30s%d%n%-27s%,.1f%n",
                 super.toString(),
                 "Rushing Carries: ", rushCar,
                 "Average Yds Per Carry: ", avgYDsPerCar);

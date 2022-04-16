@@ -8,4 +8,12 @@ public class TE extends Flex{
         this.targets = targets;
         this.avgYDsPerCatch = avgYDsPerCatch;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s%n%-30s%d%n%-27s%,.1f%n",
+                super.toString(),
+                "Total Targets: ", targets,
+                "Average Yds Per Catch: ", avgYDsPerCatch);
+    }
 }

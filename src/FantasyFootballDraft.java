@@ -11,7 +11,7 @@ public class FantasyFootballDraft extends Application {
                 FXMLLoader.load(getClass().getResource("PlayerSelect.fxml"));
 
         Scene scene = new Scene(root);
-        stage.setTitle("Player Select");
+        stage.setTitle("Fantasy Football Draft");
         stage.setScene(scene);
         stage.show();
     }

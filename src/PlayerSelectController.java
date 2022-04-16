@@ -27,10 +27,14 @@ public class PlayerSelectController {
     @FXML private TextArea myTeam;
     @FXML private TextArea playerStats;
     @FXML private TextField teamNameText;
+    @FXML private TextArea mysteryTeam1;
+    @FXML private TextArea mysteryTeam2;
     // stores the list of Player Objects
     private final ObservableList<Player> player = FXCollections.observableArrayList();
     private final ObservableList<Player> team = FXCollections.observableArrayList();
     DisplayTeam displayTeam = new DisplayTeam();
+    DisplayTeam autoTeam1 = new DisplayTeam();
+    DisplayTeam autoTeam2 = new DisplayTeam();
 
     Player[] QB = new Player[] {
         new QB("Justin Fields", "Chicago Bears", "/images/small/JustinFields.jpg",
@@ -268,11 +272,16 @@ public class PlayerSelectController {
     int defNum = 0;
     int flexNum = 0;
 
+
     @FXML
     void teamNameCommit(ActionEvent event) {
         displayTeam.setTeamName(teamNameText.getText());
         teamNameText.clear();
         myTeam.setText(displayTeam.toString());
+        autoTeam1.setTeamName("Run CMC");
+        autoTeam2.setTeamName("Never Say Never");
+        mysteryTeam1.setText(autoTeam1.toString());
+        mysteryTeam2.setText(autoTeam2.toString());
     }
 
     @FXML
@@ -283,12 +292,18 @@ public class PlayerSelectController {
         Player[] tmpTE = new Player[TE.length - 1];
         Player[] tmpK = new Player[K.length - 1];
         Player[] tmpDef = new Player[Def.length - 1];
-
-        String name = playerListView.getSelectionModel().getSelectedItem().getPlayer();
-        String position = playerListView.getSelectionModel().getSelectedItem().getPosition();
+        int indexNum1 = (int)(Math.floor(Math.random() * 5));
+        int indexNum2 = (int)(Math.floor(Math.random() * 5));
 
         try{
-            if (Objects.equals(position, "QB")) {
+            String name = playerListView.getSelectionModel().getSelectedItem().getPlayer();
+            String position = playerListView.getSelectionModel().getSelectedItem().getPosition();
+
+            if (team.toArray().length == 9) {
+                playerImageView.setImage(new Image("images/large/Trophy.jpg"));
+                playerStats.setText("Cannot Select Another Player,\n Team is Complete.");
+            }
+            else if (Objects.equals(position, "QB")) {
                 int j = 0;
                 for (Player value : QB) {
                     if (Objects.equals(name, value.getPlayer()) && qbNum < 1) {
@@ -297,14 +312,15 @@ public class PlayerSelectController {
                         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setQB(name);
                         qbNum++;
-                    } else {
-                        tmpQB[j++] = value;
-                    }
+                    } else {tmpQB[j++] = value;}
                 }
                 QB = tmpQB;
+                if (team.toArray().length == 9) {
+                    playerImageView.setImage(new Image("images/large/Trophy.jpg"));
+                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                }
             }
-
-            if (Objects.equals(position, "RB")) {
+            else if (Objects.equals(position, "RB")) {
                 int j = 0;
                 for (Player value : RB) {
                     if (Objects.equals(name, value.getPlayer()) && rbNum < 2) {
@@ -323,14 +339,15 @@ public class PlayerSelectController {
                         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setFLEX(name);
                         flexNum++;
-                    } else {
-                        tmpRB[j++] = value;
-                    }
+                    } else {tmpRB[j++] = value;}
                 }
                 RB = tmpRB;
+                if (team.toArray().length == 9) {
+                    playerImageView.setImage(new Image("images/large/Trophy.jpg"));
+                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                }
             }
-
-            if (Objects.equals(position, "WR")) {
+            else if (Objects.equals(position, "WR")) {
                 int j = 0;
                 for (Player value : WR) {
                     if (Objects.equals(name, value.getPlayer()) && wrNum < 2) {
@@ -349,14 +366,15 @@ public class PlayerSelectController {
                         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setFLEX(name);
                         flexNum++;
-                    } else {
-                        tmpWR[j++] = value;
-                    }
+                    } else {tmpWR[j++] = value;}
                 }
                 WR = tmpWR;
+                if (team.toArray().length == 9) {
+                    playerImageView.setImage(new Image("images/large/Trophy.jpg"));
+                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                }
             }
-
-            if (Objects.equals(position, "TE")) {
+            else if (Objects.equals(position, "TE")) {
                 int j = 0;
                 for (Player value : TE) {
                     if (Objects.equals(name, value.getPlayer()) && teNum < 1) {
@@ -371,14 +389,15 @@ public class PlayerSelectController {
                         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setFLEX(name);
                         flexNum++;
-                    } else {
-                        tmpTE[j++] = value;
-                    }
+                    } else {tmpTE[j++] = value;}
                 }
                 TE = tmpTE;
+                if (team.toArray().length == 9) {
+                    playerImageView.setImage(new Image("images/large/Trophy.jpg"));
+                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                }
             }
-
-            if (Objects.equals(position, "K")) {
+            else if (Objects.equals(position, "K")) {
                 int j = 0;
                 for (Player value : K) {
                     if (Objects.equals(name, value.getPlayer()) && kNum < 1) {
@@ -387,14 +406,15 @@ public class PlayerSelectController {
                         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setK(name);
                         kNum++;
-                    } else {
-                        tmpK[j++] = value;
-                    }
+                    } else {tmpK[j++] = value;}
                 }
                 K = tmpK;
+                if (team.toArray().length == 9) {
+                    playerImageView.setImage(new Image("images/large/Trophy.jpg"));
+                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                }
             }
-
-            if (Objects.equals(position, "Def") && defNum < 1) {
+            else if (Objects.equals(position, "Def") && defNum < 1) {
                 int j = 0;
                 for (Player value : Def) {
                     if (Objects.equals(name, value.getPlayer())) {
@@ -403,29 +423,217 @@ public class PlayerSelectController {
                         playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setDEF(name);
                         defNum++;
-                    } else {
-                        tmpDef[j++] = value;
-                    }
+                    } else {tmpDef[j++] = value;}
                 }
                 Def = tmpDef;
+                if (team.toArray().length == 9) {
+                    playerImageView.setImage(new Image("images/large/Trophy.jpg"));
+                    playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                }
             }
+            // Auto Draft
+            if(team.toArray().length != 9){
+                int j = 0;
+                if(autoTeam1.getRB1() == null) {
+                    tmpRB = new Player[RB.length - 1];
+                    autoTeam1.setRB1(RB[indexNum1].getPlayer());
+                    for(Player value: RB){
+                        if (Objects.equals(autoTeam1.getRB1(), value.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpRB[j++] = value;}
+                    }
+                    RB = tmpRB;
 
-            if (qbNum == 1 && rbNum == 2 && wrNum == 2 && teNum == 1 && flexNum == 1 && kNum == 1 && defNum == 1) {
-                playerImageView.setImage(new Image("images/large/Trophy.jpg"));
-                playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+                    tmpRB = new Player[RB.length - 1];
+                    j = 0;
+                    autoTeam2.setRB1(RB[indexNum2].getPlayer());
+                    for(Player value2: RB){
+                        if (Objects.equals(autoTeam2.getRB1(), value2.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpRB[j++] = value2;}
+                    }
+                    RB = tmpRB;
+                }
+                else if(autoTeam1.getWR1() == null) {
+                    tmpWR = new Player[WR.length - 1];
+                    autoTeam1.setWR1(WR[indexNum1].getPlayer());
+                    for(Player value: WR){
+                        if (Objects.equals(autoTeam1.getWR1(), value.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpWR[j++] = value;}
+                    }
+                    WR = tmpWR;
 
+                    tmpWR = new Player[WR.length - 1];
+                    j = 0;
+                    autoTeam2.setWR1(WR[indexNum2].getPlayer());
+                    for(Player value2: WR){
+                        if (Objects.equals(autoTeam2.getWR1(), value2.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpWR[j++] = value2;}
+                    }
+                    WR = tmpWR;
+                }
+                else if(autoTeam1.getRB2() == null) {
+                    tmpRB = new Player[RB.length - 1];
+                    autoTeam1.setRB2(RB[indexNum1].getPlayer());
+                    for(Player value: RB){
+                        if (Objects.equals(autoTeam1.getRB2(), value.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpRB[j++] = value;}
+                    }
+                    RB = tmpRB;
+
+                    tmpRB = new Player[RB.length - 1];
+                    j = 0;
+                    autoTeam2.setRB2(RB[indexNum2].getPlayer());
+                    for(Player value2: RB){
+                        if (Objects.equals(autoTeam2.getRB2(), value2.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpRB[j++] = value2;}
+                    }
+                    RB = tmpRB;
+                }
+                else if(autoTeam1.getWR2() == null) {
+                    tmpWR = new Player[WR.length - 1];
+                    autoTeam1.setWR2(WR[indexNum1].getPlayer());
+                    for(Player value: WR){
+                        if (Objects.equals(autoTeam1.getWR2(), value.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpWR[j++] = value;}
+                    }
+                    WR = tmpWR;
+
+                    tmpWR = new Player[WR.length - 1];
+                    j = 0;
+                    autoTeam2.setWR2(WR[indexNum2].getPlayer());
+                    for(Player value2: WR){
+                        if (Objects.equals(autoTeam2.getWR2(), value2.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpWR[j++] = value2;}
+                    }
+                    WR = tmpWR;
+                }
+                else if(autoTeam1.getQB() == null) {
+                    tmpQB = new Player[QB.length - 1];
+                    autoTeam1.setQB(QB[indexNum1].getPlayer());
+                    for(Player value: QB){
+                        if (Objects.equals(autoTeam1.getQB(), value.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpQB[j++] = value;}
+                    }
+                    QB = tmpQB;
+
+                    tmpQB = new Player[QB.length - 1];
+                    j = 0;
+                    autoTeam2.setQB(QB[indexNum2].getPlayer());
+                    for(Player value: QB){
+                        if (Objects.equals(autoTeam2.getQB(), value.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpQB[j++] = value;}
+                    }
+                    QB = tmpQB;
+                }
+                else if(autoTeam1.getTE() == null) {
+                    tmpTE = new Player[TE.length - 1];
+                    autoTeam1.setTE(TE[indexNum1].getPlayer());
+                    for(Player value: TE){
+                        if (Objects.equals(autoTeam1.getTE(), value.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpTE[j++] = value;}
+                    }
+                    TE = tmpTE;
+
+                    tmpTE = new Player[TE.length - 1];
+                    j = 0;
+                    autoTeam2.setTE(TE[indexNum2].getPlayer());
+                    for(Player value2: TE){
+                        if (Objects.equals(autoTeam2.getTE(), value2.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpTE[j++] = value2;}
+                    }
+                    TE = tmpTE;
+                }
+                else if(autoTeam1.getFLEX() == null) {
+                    tmpRB = new Player[RB.length - 1];
+                    autoTeam1.setFLEX(RB[indexNum1].getPlayer());
+                    for(Player value: RB){
+                        if (Objects.equals(autoTeam1.getFLEX(), value.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpRB[j++] = value;}
+                    }
+                    RB = tmpRB;
+
+                    tmpRB = new Player[RB.length - 1];
+                    j = 0;
+                    autoTeam2.setFLEX(RB[indexNum2].getPlayer());
+                    for(Player value2: RB){
+                        if (Objects.equals(autoTeam2.getFLEX(), value2.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpRB[j++] = value2;}
+                    }
+                    RB = tmpRB;
+                }
+                else if(autoTeam1.getDEF() == null) {
+                    tmpDef = new Player[Def.length - 1];
+                    autoTeam1.setDEF(Def[indexNum1].getPlayer());
+                    for(Player value: Def){
+                        if (Objects.equals(autoTeam1.getDEF(), value.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpDef[j++] = value;}
+                    }
+                    Def = tmpDef;
+
+                    tmpDef = new Player[Def.length - 1];
+                    j = 0;
+                    autoTeam2.setDEF(Def[indexNum2].getPlayer());
+                    for(Player value2: Def){
+                        if (Objects.equals(autoTeam2.getDEF(), value2.getPlayer())) {
+                            playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                        }else {tmpDef[j++] = value2;}
+                    }
+                    Def = tmpDef;
+                }
+            }
+            if(autoTeam1.getK() == null && team.toArray().length == 9) {
+                tmpK = new Player[K.length - 1];
+                int j = 0;
+                autoTeam1.setK(K[indexNum1].getPlayer());
+                for (Player value : K) {
+                    if (Objects.equals(autoTeam1.getK(), value.getPlayer())) {
+                        playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                    } else {
+                        tmpK[j++] = value;
+                    }
+                }
+                K = tmpK;
+
+                tmpK = new Player[K.length - 1];
+                j = 0;
+                autoTeam2.setK(K[indexNum2].getPlayer());
+                for (Player value2 : K) {
+                    if (Objects.equals(autoTeam2.getK(), value2.getPlayer())) {
+                        playerImageView.setImage(new Image("images/large/AutoDraft.jpg"));
+                    } else {
+                        tmpK[j++] = value2;
+                    }
+                }
+                K = tmpK;
             }
         }catch(ArrayIndexOutOfBoundsException outOfBoundsException) {
             playerListView.getItems().clear();
             playerImageView.setImage(new Image("images/large/RedX.jpg"));
             playerStats.setText("That Position is Full, Try Again!");
-            myTeam.setText("That Position is Full, Try Again!");
         }catch(Exception ignored) {;};
 
-
+        if (team.toArray().length == 9) {
+            playerImageView.setImage(new Image("images/large/Trophy.jpg"));
+            playerStats.setText("TEAM COMPLETE! CONGRATS!!!");
+        }
         playerListView.getItems().clear();
         myTeam.setText(displayTeam.toString());
-
+        mysteryTeam1.setText(autoTeam1.toString());
+        mysteryTeam2.setText(autoTeam2.toString());
     }
 
     @FXML
@@ -435,7 +643,6 @@ public class PlayerSelectController {
         Collections.addAll(player, Def);
         playerListView.setItems(player);
     }
-
     @FXML
     void kButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -443,7 +650,6 @@ public class PlayerSelectController {
         Collections.addAll(player, K);
         playerListView.setItems(player);
     }
-
     @FXML
     void qbButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -451,7 +657,6 @@ public class PlayerSelectController {
         Collections.addAll(player, QB);
         playerListView.setItems(player);
     }
-
     @FXML
     void rbButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -459,7 +664,6 @@ public class PlayerSelectController {
         Collections.addAll(player, RB);
         playerListView.setItems(player);
     }
-
     @FXML
     void teButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -467,7 +671,6 @@ public class PlayerSelectController {
         Collections.addAll(player, TE);
         playerListView.setItems(player);
     }
-
     @FXML
     void wrButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -488,8 +691,7 @@ public class PlayerSelectController {
                             playerStats.setText(newValue.toString());
                         } catch(Exception ignored) {;}
                     }
-                }
-        );
+                });
         teamListView.getSelectionModel().selectedItemProperty().addListener(
                 new ChangeListener<Player>() {
                     @Override
@@ -500,8 +702,7 @@ public class PlayerSelectController {
                             playerStats.setText(newValue.toString());
                         } catch(Exception ignored) {;}
                     }
-                }
-        );
+                });
         playerListView.setCellFactory(new Callback<ListView<Player>, ListCell<Player>>() {
             @Override
             public ListCell<Player> call (ListView<Player> listView) {

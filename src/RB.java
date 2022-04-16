@@ -4,8 +4,9 @@ public class RB extends Flex{
     private double avgYDsPerCar;
 
     // constructor
-    public RB(int rushCar, double avgYDsPerCar){
-        // super();
+    public RB(String player, String team, String thumbImage, String largeImage, String position, double prevPoints, double projPoints,
+              double rushYDs, int rushTDs, int receptions, double receivingYDs, int receivingTDs, int rushCar, double avgYDsPerCar){
+        super(player, team, thumbImage, largeImage, position, prevPoints, projPoints, rushYDs, rushTDs, receptions, receivingYDs, receivingTDs);
         this.rushCar = rushCar;
         this.avgYDsPerCar = avgYDsPerCar;
     }
@@ -20,8 +21,9 @@ public class RB extends Flex{
 
     @Override
     public String toString() {
-        return String.format("Rushing Attempts: %d%n" +
-                "Average Yard per Carry: %,.2f%n",
-                this.rushCar, this.avgYDsPerCar);
+        return String.format("%s%n%-30s%d%n%-27s%,.1f%n",
+                super.toString(),
+                "Rushing Carries: ", rushCar,
+                "Average Yds Per Carry: ", avgYDsPerCar);
     }
 }

@@ -11,7 +11,7 @@ public class TE extends Flex{
 
     @Override
     public String toString() {
-        return String.format("%s%-30s%d%n%-27s%,.1f%n",
+        return String.format("%s%-29s%d%n%-27s%,.1f%n",
                 super.toString(),
                 "Total Targets: ", targets,
                 "Average Yds Per Catch: ", avgYDsPerCatch);

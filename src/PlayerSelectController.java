@@ -224,7 +224,22 @@ public class PlayerSelectController {
                     8, 3, 32, 28, 51, 50),
             new K("Robbie Gould", "San Francisco 49ers", "/images/small/RobbieGould.jpg",
                     "/images/large/RobbieGould.jpg", "K", 109.0, 130.86, 16,
-                    8, 3, 32, 27, 41, 39)
+                    8, 3, 32, 27, 41, 39),
+            new K("Evan McPherson", "Cincinnati Bengals", "/images/small/EvanMcpherson.jpg",
+                    "/images/large/EvanMcpherson.jpg", "K", 149.0, 148.83, 18,
+                    9,4,35,31, 47,46),
+            new K("Matt Gay", "Los Angeles Rams", "/images/small/MattGay.jpg",
+                    "/images/large/MattGay.jpg", "K", 157.0, 147.97, 18,
+                    9,4,35,31,46,45),
+            new K("Nick Folk", "New England Patriots", "/images/small/NickFolk.jpg",
+                    "/images/large/NickFolk.jpg", "K", 168.0, 135.79, 17,
+                    8,3,32,28,41,41),
+            new K("Tyler Bass", "Buffalo Bills", "/images/small/TylerBass.jpg",
+                    "/images/large/TylerBass.jpg", "K", 139.0, 132.86, 16,
+                    7,3,31,26, 50,47),
+            new K("Mason Crosby", "Green Bay Packers", "/images/small/MasonCrosby.jpg",
+                    "/images/large/MasonCrosby.jpg", "K", 125.0, 131.71, 16,
+                    8,3,32,26,48,44)
     };
 
     Player[] Def = new Player[] {

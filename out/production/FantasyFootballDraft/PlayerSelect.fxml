@@ -93,7 +93,7 @@
         </HBox>
     </top>
     <left>
-        <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="300.0" BorderPane.alignment="CENTER">
+        <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="300.0" BorderPane.alignment="CENTER">
             <panes>
                 <TitledPane animated="false" text="Available Players">
                     <content>
@@ -101,20 +101,20 @@
                             <children>
                                 <ListView fx:id="playerListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
                                     <padding>
-                                        <Insets right="10.0" />
+                                        <Insets right="5.0" />
                                     </padding>
                                 </ListView>
                             </children>
                         </AnchorPane>
                     </content>
                 </TitledPane>
-                <TitledPane animated="false" text="My Team">
+                <TitledPane animated="false" text="My Team (Detailed)">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
                                 <ListView fx:id="teamListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
                                     <padding>
-                                        <Insets right="10.0" />
+                                        <Insets right="5.0" />
                                     </padding>
                                 </ListView>
                             </children>
@@ -127,60 +127,6 @@
             </padding>
         </Accordion>
     </left>
-    <right>
-        <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="300.0" BorderPane.alignment="CENTER">
-            <panes>
-                <TitledPane animated="false" text="Player Stats">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                            <children>
-                                <TextArea fx:id="playerStats" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
-                                    <padding>
-                                        <Insets right="10.0" />
-                                    </padding>
-                                    <font>
-                                        <Font name="Comic Sans MS Bold Italic" size="14.0" />
-                                    </font>
-                                </TextArea>
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </TitledPane>
-                <TitledPane animated="false" text="My Team">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                            <children>
-                                <TextArea fx:id="myTeam" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0">
-                                    <padding>
-                                        <Insets right="10.0" />
-                                    </padding>
-                                    <font>
-                                        <Font name="Comic Sans MS Bold Italic" size="14.0" />
-                                    </font>
-                                </TextArea>
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </TitledPane>
-            </panes>
-            <padding>
-                <Insets left="8.0" />
-            </padding>
-        </Accordion>
-    </right>
-    <bottom>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectPlayerButtonPress" prefWidth="300.0" text="Select Player" textAlignment="CENTER" BorderPane.alignment="CENTER">
-            <font>
-                <Font name="Comic Sans MS" size="18.0" />
-            </font>
-            <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding>
-            <BorderPane.margin>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
-            </BorderPane.margin>
-        </Button>
-    </bottom>
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -233,4 +179,65 @@
          </children>
       </StackPane>
    </center>
+   <right>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="playerStats" minWidth="-Infinity" prefHeight="450.0" prefWidth="300.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="14.0" />
+               </font>
+            </TextArea>
+              <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectPlayerButtonPress" prefWidth="300.0" text="Select Player" textAlignment="CENTER">
+                  <font>
+                      <Font name="Comic Sans MS" size="18.0" />
+                  </font>
+                  <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+              </Button>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="mysteryTeam1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="14.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="myTeam" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="59.0" right="59.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="14.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="mysteryTeam2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="30.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="14.0" />
+               </font>
+            </TextArea>
+         </children>
+      </HBox>
+   </bottom>
 </BorderPane>

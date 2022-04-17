@@ -1,3 +1,6 @@
+/**
+ * Goto https://fantasy.espn.com/football/players/projections for player stats
+ */
 public class TE extends Flex{
     private int targets;
     private double avgYDsPerCatch;

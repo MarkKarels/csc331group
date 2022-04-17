@@ -1,3 +1,6 @@
+/**
+ * Goto https://fantasy.espn.com/football/players/projections for player stats
+ */
 public class DisplayTeam {
     private String teamName;
     private String QB;

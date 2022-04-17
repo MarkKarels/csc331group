@@ -1,7 +1,6 @@
 /**
  * Goto https://fantasy.espn.com/football/players/projections for player stats
  */
-
 public class Def extends Player{
     // instance variables
     private int sacks;
@@ -10,7 +9,6 @@ public class Def extends Player{
     private int totalTDs;
     private int pointsAgainst;
     private double yardsAgainst;
-
     // constructor
     public Def( String player, String team, String thumbImage, String largeImage, String position, double prevPoints, double projPoints,
             int sacks, int interceptions, int fumbleRecover, int totalTDs, int pointsAgainst, double yardsAgainst) {
@@ -22,7 +20,6 @@ public class Def extends Player{
         this.pointsAgainst = pointsAgainst;
         this.yardsAgainst = yardsAgainst;
     }
-
     // mutators
     public void setSacks(int sacks) {
         this.sacks = sacks;
@@ -40,7 +37,6 @@ public class Def extends Player{
     public void setAvgYDsPerCatch(double yardsAgainst) {
         this.yardsAgainst = yardsAgainst;
     }
-
     // accessors
     public int getSacks() {
         return sacks;
@@ -60,7 +56,7 @@ public class Def extends Player{
     public double getAvgYDsPerCatch() {
         return yardsAgainst;
     }
-
+    // toString method
     @Override
     public String toString() {
         return String.format("%n%s%n%s%n%s%n%n%-30s%,.1f%n%n%28s%n%-32s%,.1f%n%-31s%d%n%-31s%d%n%-29s%d%n%-29s%d%n%-31s%d%n%-30s%,.1f",

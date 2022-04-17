@@ -1,7 +1,6 @@
 /**
  * Goto https://fantasy.espn.com/football/players/projections for player stats
  */
-
 public class QB extends Player{
     private double passYDs;
     private int passTDs;

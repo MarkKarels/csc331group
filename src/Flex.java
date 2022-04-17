@@ -1,3 +1,6 @@
+/**
+ * Goto https://fantasy.espn.com/football/players/projections for player stats
+ */
 public class Flex extends Player{
     private double rushYDs;
     private int rushTDs;

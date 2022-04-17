@@ -1,3 +1,6 @@
+/**
+ * Goto https://fantasy.espn.com/football/players/projections for player stats
+ */
 public class RB extends Flex{
     // instance variables
     private int rushCar;

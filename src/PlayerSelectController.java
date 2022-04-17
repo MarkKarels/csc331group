@@ -1,7 +1,3 @@
-/**
- * Goto https://fantasy.espn.com/football/players/projections for player stats
- */
-
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -17,8 +13,9 @@ import javafx.scene.control.TextArea;
 import java.util.Collections;
 import java.util.Objects;
 import javafx.scene.control.TextField;
-
-
+/**
+ * Goto https://fantasy.espn.com/football/players/projections for player stats
+ */
 public class PlayerSelectController {
     // instance variables for interacting with GUI
     @FXML private ListView<Player> playerListView;
@@ -677,7 +674,9 @@ public class PlayerSelectController {
         Collections.addAll(player, WR);
         playerListView.setItems(player);
     }
-
+    /**
+     * Goto https://fantasy.espn.com/football/players/projections for player stats
+     */
     // initialize controller
     public void initialize() {
         playerListView.getSelectionModel().selectedItemProperty().addListener(

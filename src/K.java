@@ -1,7 +1,6 @@
 /**
  * Goto https://fantasy.espn.com/football/players/projections for player stats
  */
-
 public class K extends Player{
     private int made1to39;
     private int made40to49;

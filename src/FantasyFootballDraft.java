@@ -3,7 +3,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+/**
+ * Goto https://fantasy.espn.com/football/players/projections for player stats
+ */
 public class FantasyFootballDraft extends Application {
     @Override
     public void start(Stage stage) throws Exception {

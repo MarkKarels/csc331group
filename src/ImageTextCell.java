@@ -5,7 +5,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
-
+/**
+ * Goto https://fantasy.espn.com/football/players/projections for player stats
+ */
 public class ImageTextCell extends ListCell<Player>{
     private VBox vbox = new VBox(8.0); // 8 points of gap between controls
     private ImageView thumbImageView = new ImageView(); // initially empty

@@ -316,7 +316,6 @@ public class PlayerSelectController {
                     if (Objects.equals(name, value.getPlayer()) && qbNum < 1) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setQB(name);
                         qbNum++;
                     } else {tmpQB[j++] = value;}
@@ -333,7 +332,6 @@ public class PlayerSelectController {
                     if (Objects.equals(name, value.getPlayer()) && rbNum < 2) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         if(rbNum <1) {
                             displayTeam.setRB1(name);
                         } else {
@@ -343,7 +341,6 @@ public class PlayerSelectController {
                     } else if (Objects.equals(name, value.getPlayer()) && flexNum < 1) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setFLEX(name);
                         flexNum++;
                     } else {tmpRB[j++] = value;}
@@ -360,7 +357,6 @@ public class PlayerSelectController {
                     if (Objects.equals(name, value.getPlayer()) && wrNum < 2) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         if(wrNum <1) {
                             displayTeam.setWR1(name);
                         } else {
@@ -370,7 +366,6 @@ public class PlayerSelectController {
                     } else if (Objects.equals(name, value.getPlayer()) && flexNum < 1) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setFLEX(name);
                         flexNum++;
                     } else {tmpWR[j++] = value;}
@@ -387,13 +382,11 @@ public class PlayerSelectController {
                     if (Objects.equals(name, value.getPlayer()) && teNum < 1) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setTE(name);
                         teNum++;
                     } else if (Objects.equals(name, value.getPlayer()) && flexNum < 1) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setFLEX(name);
                         flexNum++;
                     } else {tmpTE[j++] = value;}
@@ -410,7 +403,6 @@ public class PlayerSelectController {
                     if (Objects.equals(name, value.getPlayer()) && kNum < 1) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setK(name);
                         kNum++;
                     } else {tmpK[j++] = value;}
@@ -427,7 +419,6 @@ public class PlayerSelectController {
                     if (Objects.equals(name, value.getPlayer())) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        playerImageView.setImage(new Image("images/large/PickIsIn.jpg"));
                         displayTeam.setDEF(name);
                         defNum++;
                     } else {tmpDef[j++] = value;}

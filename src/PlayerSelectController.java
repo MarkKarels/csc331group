@@ -315,9 +315,16 @@ public class PlayerSelectController {
         int indexNum2 = (int)(Math.floor(Math.random() * 5));
 
         try{
+            // Team name must not be null before starting to select players
+            if(displayTeam.getTeamName() == null){
+                playerStats.setText("Please Choose a Team Name\n   Before Draft Begins!");
+                playerImageView.setImage(new Image("images/large/RedX.jpg"));
+                throw new Exception("");
+            }
+            // assign variables to name and position
             String name = playerListView.getSelectionModel().getSelectedItem().getPlayer();
             String position = playerListView.getSelectionModel().getSelectedItem().getPosition();
-
+            // check to see if draft is already completed
             if (team.toArray().length == 9) {
                 playerImageView.setImage(new Image("images/large/Trophy.jpg"));
                 playerStats.setText("Cannot Select Another Player,\n Team is Complete.");

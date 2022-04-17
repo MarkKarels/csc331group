@@ -263,7 +263,7 @@ public class PlayerSelectController {
             new Def("Los Angeles Rams", "Los Angeles Rams", "/images/small/LARams.jpg",
                     "/images/large/LARams.jpg", "Def", 105.0, 94.1, 42,
                     14, 8, 2, 372, 5971.0),
-            new Def("BuffaloBills", "Buffalo Bills", "/images/small/BuffaloBills.jpg",
+            new Def("Buffalo Bills", "Buffalo Bills", "/images/small/BuffaloBills.jpg",
                     "/images/large/BuffaloBills.jpg", "Def", 154.0, 129.83, 44,
                     14, 8, 2, 340, 5755.0)
     };

@@ -31,16 +31,16 @@ public class Flex extends Player{
 
     @Override
     public String toString(){
-        return String.format("%n%s%n%s%n%s%n%n%-30s%,.1f%n%n%28s%n%-32s%,.1f%n%-30s%,.1f%n%-28s%d%n%-29s%d%n%-28s%,.1f%n%-29s%d%n",
+        return String.format("%n%s%n%s%n%s%n%n%-30s%,.1f%n%n%28s%n%-32s%,.1f%n%-30s%,.1f%n%-29s%d%n%-31s%d%n%-30s%,.1f%n%-28s%d%n",
                 getPosition(),
                 getPlayer(), getTeam(),
                 "2021 Total Points: ", getPrevPoints(),
                 "2022 Projected",
                 "Points: ", getProjPoints(),
-                "Passing Yards: ", rushYDs,
-                "Passing Touchdowns: ", rushTDs,
-                "Passing Interceptions: ", receptions,
-                "Rushing Attempts: ", receivingYDs,
-                "Rushing Yards: ", receivingTDs);
+                "Rushing Yards: ", rushYDs,
+                "Rushing Touchdowns: ", rushTDs,
+                "Receptions: ", receptions,
+                "Receiving Yards: ", receivingYDs,
+                "Receiving Touchdowns: ", receivingTDs);
     }
 }

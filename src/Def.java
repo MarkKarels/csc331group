@@ -59,9 +59,9 @@ public class Def extends Player{
     // toString method
     @Override
     public String toString() {
-        return String.format("%n%s%n%s%n%s%n%n%-30s%,.1f%n%n%28s%n%-32s%,.1f%n%-31s%d%n%-31s%d%n%-29s%d%n%-29s%d%n%-31s%d%n%-30s%,.1f",
+        return String.format("%n%s%n%s%n%n%-30s%,.1f%n%n%28s%n%-32s%,.1f%n%-31s%d%n%-31s%d%n%-29s%d%n%-29s%d%n%-31s%d%n%-30s%,.1f",
                 getPosition(),
-                getPlayer(), getTeam(),
+                getTeam(),
                 "2021 Total Points: ", getPrevPoints(),
                 "2022 Projected",
                 "Points: ", getProjPoints(),

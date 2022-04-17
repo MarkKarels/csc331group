@@ -628,6 +628,7 @@ public class PlayerSelectController {
             playerImageView.setImage(new Image("images/large/Trophy.jpg"));
             playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
         }
+
         playerListView.getItems().clear();
         myTeam.setText(displayTeam.toString());
         mysteryTeam1.setText(autoTeam1.toString());

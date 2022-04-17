@@ -204,7 +204,7 @@
    <bottom>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="mysteryTeam1" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0">
+            <TextArea fx:id="mysteryTeam1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="305.0">
                <HBox.margin>
                   <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
                </HBox.margin>
@@ -215,7 +215,7 @@
                   <Font name="Comic Sans MS Bold Italic" size="14.0" />
                </font>
             </TextArea>
-            <TextArea fx:id="myTeam" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0">
+            <TextArea fx:id="myTeam" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="305.0">
                <HBox.margin>
                   <Insets bottom="10.0" left="59.0" right="59.0" top="10.0" />
                </HBox.margin>
@@ -226,7 +226,7 @@
                   <Font name="Comic Sans MS Bold Italic" size="14.0" />
                </font>
             </TextArea>
-            <TextArea fx:id="mysteryTeam2" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0">
+            <TextArea fx:id="mysteryTeam2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="305.0">
                <HBox.margin>
                   <Insets bottom="10.0" left="30.0" top="10.0" />
                </HBox.margin>

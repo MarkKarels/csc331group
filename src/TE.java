@@ -11,7 +11,21 @@ public class TE extends Flex{
         this.targets = targets;
         this.avgYDsPerCatch = avgYDsPerCatch;
     }
+    //mutators (setters)
+    public void setTargets(int targets){
+        this.targets = targets;
+    }
+    public void setAvgYDsPerCatch(double avgYDsPerCatch){
+        this.avgYDsPerCatch = avgYDsPerCatch;
+    }
 
+    //accessors (getters)
+    public int getTargets(){
+        return this.targets;
+    }
+    public double getAvgYDsPerCatch(){
+        return this.avgYDsPerCatch;
+    }
     @Override
     public String toString() {
         return String.format("%s%-30s%d%n%-27s%,.1f%n",

@@ -28,7 +28,7 @@
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
                     </HBox.margin>
                     <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -39,7 +39,7 @@
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
                     </HBox.margin>
                     <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -50,7 +50,7 @@
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
                     </HBox.margin>
                     <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -61,7 +61,7 @@
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
                     </HBox.margin>
                     <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -72,7 +72,7 @@
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
                     </HBox.margin>
                     <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -83,7 +83,7 @@
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
                     </HBox.margin>
                     <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -93,15 +93,15 @@
         </HBox>
     </top>
     <left>
-        <Accordion maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+        <Accordion maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="305.0" BorderPane.alignment="CENTER">
             <panes>
-                <TitledPane animated="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="277.0" text="Available Players">
+                <TitledPane animated="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="281.0" text="Available Players">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
                                 <ListView fx:id="playerListView" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="290.0">
                                     <padding>
-                                        <Insets right="5.0" />
+                                        <Insets left="5.0" right="5.0" />
                                     </padding>
                                 </ListView>
                             </children>
@@ -114,7 +114,7 @@
                             <children>
                                 <ListView fx:id="teamListView" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="290.0">
                                     <padding>
-                                        <Insets right="5.0" />
+                                        <Insets left="5.0" right="5.0" />
                                     </padding>
                                 </ListView>
                             </children>
@@ -123,8 +123,11 @@
                 </TitledPane>
             </panes>
             <padding>
-                <Insets left="10.0" right="8.0" />
+                <Insets left="8.0" right="8.0" />
             </padding>
+         <BorderPane.margin>
+            <Insets left="5.0" />
+         </BorderPane.margin>
         </Accordion>
     </left>
    <center>
@@ -180,15 +183,18 @@
       </StackPane>
    </center>
    <right>
-      <VBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+      <VBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="305.0" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="playerStats" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0">
+            <TextArea fx:id="playerStats" minWidth="-Infinity" prefHeight="400.0" prefWidth="305.0">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="14.0" />
                </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </TextArea>
               <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectPlayerButtonPress" prefWidth="300.0" text="Select Player" textAlignment="CENTER">
                   <font>
@@ -199,6 +205,9 @@
                   </padding>
               </Button>
          </children>
+         <BorderPane.margin>
+            <Insets right="5.0" />
+         </BorderPane.margin>
       </VBox>
    </right>
    <bottom>
@@ -217,7 +226,7 @@
             </TextArea>
             <TextArea fx:id="myTeam" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="305.0">
                <HBox.margin>
-                  <Insets bottom="10.0" left="59.0" right="59.0" top="10.0" />
+                  <Insets bottom="10.0" left="63.0" right="63.0" top="10.0" />
                </HBox.margin>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -228,7 +237,7 @@
             </TextArea>
             <TextArea fx:id="mysteryTeam2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="305.0">
                <HBox.margin>
-                  <Insets bottom="10.0" left="30.0" top="10.0" />
+                  <Insets bottom="10.0" left="30.0" right="5.0" top="10.0" />
                </HBox.margin>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

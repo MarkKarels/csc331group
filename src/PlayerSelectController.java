@@ -203,12 +203,27 @@ public class PlayerSelectController {
             new TE("Travis Kelce", "Kansas City Chiefs", "/images/small/TravisKelce.jpg",
                     "/images/large/TravisKelce.jpg", "TE", 262.8, 240.65,
                     7, 0, 92, 1034, 7, 126, 11.3),
+            new TE("Kyle Pitts", "Atlanta Falcons", "/images/small/KylePitts.jpg",
+                    "/images/large/KylePitts.jpg", "TE", 176.6, 202.13, 0,
+                    0, 76, 972, 5, 115, 12.8),
             new TE("Darren Waller", "Las Vegas Raiders", "/images/small/DarrenWaller.jpg",
                     "/images/large/DarrenWaller.jpg", "TE", 133.5, 195.33,
                     0, 0, 70, 908, 6, 109, 12.9),
             new TE("George Kittle", "San Francisco 49ers", "/images/small/GeorgeKittle.jpg",
                     "/images/large/GeorgeKittle.jpg", "TE", 198.0, 181.57,
                     12, 0, 67, 835, 5, 96, 12.5),
+            new TE("Dallas Goedert", "Philadelphia Eagles", "/images/small/DallasGoedert.jpg",
+                    "/images/large/DallasGoedert.jpg", "TE", 165.0, 172.26, 0,
+                    0, 67, 810, 4, 94, 12.1),
+            new TE("TJ Hockenson", "Detroit Lions", "/images/small/TJHockenson.jpg",
+                    "images/large/TJHockenson.jpg", "TE", 145.3, 168.19, 0,
+                    0, 68, 700, 5, 100, 10.3),
+            new TE("Pat Frieiermuth", "Pittsburgh Steelers", "/images/small/PatFrieiermuth.jpg",
+                    "/images/large/PatFrieiermuth.jpg", "TE", 151.7, 148.53, 0,
+                    0, 65, 585, 4, 90, 8.9),
+            new TE("Mike Gesicki", "Miami Dolphins", "/images/small/MikeGesicki.jpg",
+                    "/images/large/MikeGesicki.jpg", "TE", 165.0, 145.59, 0,
+                    0, 56, 620, 5, 88, 11.0),
             new TE("Cole Kmet", "Chicago Bears", "/images/small/ColeKmet.jpg",
                     "/images/large/ColeKmet.jpg", "TE", 121.2, 136.59, 0,
                     0, 55, 591, 4, 85, 10.6 )
@@ -294,13 +309,15 @@ public class PlayerSelectController {
         int mysteryNum1 = (int)(Math.floor(Math.random() * 10));
         int mysteryNum2 = (int)(Math.floor(Math.random() * 10));
 
+        if (displayTeam.getTeamName() == null) {
+            autoTeam1.setTeamName(mysteryNames1[mysteryNum1]);
+            autoTeam2.setTeamName(mysteryNames2[mysteryNum2]);
+            mysteryTeam1.setText(autoTeam1.toString());
+            mysteryTeam2.setText(autoTeam2.toString());
+        }
         displayTeam.setTeamName(teamNameText.getText());
         teamNameText.clear();
         myTeam.setText(displayTeam.toString());
-        autoTeam1.setTeamName(mysteryNames1[mysteryNum1]);
-        autoTeam2.setTeamName(mysteryNames2[mysteryNum2]);
-        mysteryTeam1.setText(autoTeam1.toString());
-        mysteryTeam2.setText(autoTeam2.toString());
     }
 
     @FXML
@@ -658,43 +675,55 @@ public class PlayerSelectController {
     void defButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
-        Collections.addAll(player, Def);
-        playerListView.setItems(player);
+        if(team.toArray().length != 9) {
+            Collections.addAll(player, Def);
+            playerListView.setItems(player);
+        }
     }
     @FXML
     void kButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
-        Collections.addAll(player, K);
-        playerListView.setItems(player);
+        if(team.toArray().length != 9) {
+            Collections.addAll(player, K);
+            playerListView.setItems(player);
+        }
     }
     @FXML
     void qbButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
-        Collections.addAll(player, QB);
-        playerListView.setItems(player);
+        if(team.toArray().length != 9) {
+            Collections.addAll(player, QB);
+            playerListView.setItems(player);
+        }
     }
     @FXML
     void rbButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
-        Collections.addAll(player, RB);
-        playerListView.setItems(player);
+        if(team.toArray().length != 9) {
+            Collections.addAll(player, RB);
+            playerListView.setItems(player);
+        }
     }
     @FXML
     void teButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
-        Collections.addAll(player, TE);
-        playerListView.setItems(player);
+        if(team.toArray().length != 9) {
+            Collections.addAll(player, TE);
+            playerListView.setItems(player);
+        }
     }
     @FXML
     void wrButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
         playerListView.getItems().clear();
-        Collections.addAll(player, WR);
-        playerListView.setItems(player);
+        if(team.toArray().length != 9) {
+            Collections.addAll(player, WR);
+            playerListView.setItems(player);
+        }
     }
     /**
      * Goto https://fantasy.espn.com/football/players/projections for player stats

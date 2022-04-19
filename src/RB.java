@@ -1,5 +1,6 @@
-/**
- * Goto https://fantasy.espn.com/football/players/projections for player stats
+/** class Def is a subclass of class Flex
+ * It contains the necessary stats/information for each Running Back (RB) player object
+ * For Player Stats, visit: https://fantasy.espn.com/football/players/projections
  */
 public class RB extends Flex{
     // instance variables
@@ -22,6 +23,9 @@ public class RB extends Flex{
     public int getRushCar() {return rushCar;}
     public double getAvgYDsPerCar() {return avgYDsPerCar;}
 
+    /** Overriding toString method to display each running back (RB) object's stats
+     * @return String.format: a formatted string containing stats
+     */
     @Override
     public String toString() {
         return String.format("%s%-30s%d%n%-27s%,.1f%n",

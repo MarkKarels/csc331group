@@ -1,7 +1,11 @@
-/**
- * Goto https://fantasy.espn.com/football/players/projections for player stats
+/** class Player is the superclass
+ * It contains the necessary stats/information for each Player object and
+ * that information will be inherited by the subclasses when objects (NFL Players) for
+ * each position are created
+ * For Player Stats, visit: https://fantasy.espn.com/football/players/projections
  */
 public class Player {
+    // instance variables
     private String player;
     private String team;
     private String thumbImage;
@@ -10,6 +14,7 @@ public class Player {
     private double prevPoints;
     private double projPoints;
 
+    // constructor
     public Player (String player, String team, String thumbImage, String largeImage, String position, double prevPoints, double projPoints) {
         this.player = player;
         this.team = team;
@@ -19,7 +24,7 @@ public class Player {
         this.prevPoints = prevPoints;
         this.projPoints = projPoints;
     }
-
+    // null constructor
     public Player(){}
 
     // Mutators
@@ -40,6 +45,9 @@ public class Player {
     public double getPrevPoints() {return prevPoints;}
     public double getProjPoints() {return projPoints;}
 
+    /** Overriding toString method to display each Player
+     * @return String.format: a formatted string containing stats
+     */
     @Override
     public String toString(){
         return String.format("%s", player);

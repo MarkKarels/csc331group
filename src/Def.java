@@ -1,5 +1,7 @@
-/**
- * Goto https://fantasy.espn.com/football/players/projections for player stats
+/** class Def is a subclass of class Player
+ * It contains the necessary stats/information for each Defense player object
+ * Each Def object will be an NFL team's defense in the draft.
+ * For Player Stats, visit: https://fantasy.espn.com/football/players/projections
  */
 public class Def extends Player{
     // instance variables
@@ -56,7 +58,10 @@ public class Def extends Player{
     public double getAvgYDsPerCatch() {
         return yardsAgainst;
     }
-    // toString method
+
+    /** Overriding toString method to display each defense (Def) object's stats
+     * @return String.format: a formatted string containing stats
+     */
     @Override
     public String toString() {
         return String.format("%n%s%n%s%n%n%-30s%,.1f%n%n%28s%n%-32s%,.1f%n%-31s%d%n%-31s%d%n%-29s%d%n%-29s%d%n%-31s%d%n%-30s%,.1f",

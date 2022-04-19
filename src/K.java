@@ -1,7 +1,8 @@
-/**
- * Goto https://fantasy.espn.com/football/players/projections for player stats
+/** class K contains the necessary stats/information for each Kicker player object
+ * For Player Stats, visit: https://fantasy.espn.com/football/players/projections
  */
 public class K extends Player{
+    // instance variables
     private int made1to39;
     private int made40to49;
     private int made50plus;
@@ -10,6 +11,7 @@ public class K extends Player{
     private int xpAttempt;
     private int xpMade;
 
+    // constructor
     public K(String player, String team, String thumbImage, String largeImage, String position, double prevPoints, double projPoints,
              int made1to39, int made40to49, int made50plus, int totalAttempt, int totalMade, int xpAttempt, int xpMade){
         super(player, team, thumbImage, largeImage, position, prevPoints, projPoints);
@@ -22,6 +24,7 @@ public class K extends Player{
         this.xpMade=xpMade;
     }
 
+    // setters (mutators)
     public void setMade1to39(int made1to39) {this.made1to39=made1to39;}
     public void setMade40to49(int made40to49) {this.made40to49=made40to49;}
     public void setMade50plus(int made50plus) {this.made50plus=made50plus;}
@@ -30,6 +33,7 @@ public class K extends Player{
     public void setXpAttempt(int xpAttempt) {this.xpAttempt=xpAttempt;}
     public void setXpMade(int xpMade){this.xpMade=xpMade;}
 
+    // getters (accessors)
     public int getMade1to39() {return made1to39;}
     public int getMade40to49() {return made40to49;}
     public int getMade50plus() {return made50plus;}
@@ -38,6 +42,9 @@ public class K extends Player{
     public int getXpAttempt() {return xpAttempt;}
     public int getXpMade() {return xpMade;}
 
+    /** Overriding toString method to display each kicker (K) object's stats
+     * @return String.format: a formatted string containing stats
+     */
     @Override
     public String toString() {
         double fgPercent = (double)totalMade / (double)totalAttempt * 100;

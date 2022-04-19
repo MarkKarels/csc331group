@@ -1,7 +1,11 @@
-/**
- * Goto https://fantasy.espn.com/football/players/projections for player stats
+/** Class DisplayTeam contains the information for each user's team
+ * in the Fantasy Football Draft. Each team will have 9 players (instance variables)
+ * as well as setters/getters and a toString method for displaying the team roster.
+ * Important to note that the in the toString method, each instance variable value will
+ * initially be set to "null" until a player has been drafted.
  */
 public class DisplayTeam {
+    // instance variables (attributes)
     private String teamName;
     private String QB;
     private String RB1;
@@ -13,9 +17,10 @@ public class DisplayTeam {
     private String K;
     private String DEF;
 
-    // Initial value for String variables must be null
+    // Null Constructor; Initial value for String variables must be null
     public DisplayTeam() {}
 
+    // setters (mutators)
     public void setTeamName(String teamName) {this.teamName = teamName;}
     public void setQB(String QB) {this.QB = QB;}
     public void setRB1(String RB1) {this.RB1 = RB1;}
@@ -27,6 +32,7 @@ public class DisplayTeam {
     public void setK(String K) {this.K = K;}
     public void setDEF(String DEF) {this.DEF = DEF;}
 
+    // getters (accessors)
     public String getTeamName() {return teamName;}
     public String getQB() {return QB;}
     public String getRB1() {return RB1;}
@@ -38,6 +44,7 @@ public class DisplayTeam {
     public String getK() {return K;}
     public String getDEF() {return DEF;}
 
+    // public toString() method to customize formatting of String output
     @Override
     public String toString() {
         return String.format("%n%s%n%n%-19s%s%n%-20s%s%n%-20s%s%n%-19s%s%n%-19s%s%n%-21s%s%n%-21s%s%n%-22s%s%n%-19s%s%n",

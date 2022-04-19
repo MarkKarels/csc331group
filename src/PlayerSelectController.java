@@ -13,8 +13,8 @@ import javafx.scene.control.TextArea;
 import java.util.Collections;
 import java.util.Objects;
 import javafx.scene.control.TextField;
-/**
- * Goto https://fantasy.espn.com/football/players/projections for player stats
+/** PlayerSelectController.java
+ * Controller for Player Select Application, which is the Fantasy Football Draft GUI
  */
 public class PlayerSelectController {
     // instance variables for interacting with GUI
@@ -29,14 +29,20 @@ public class PlayerSelectController {
     // stores the list of Player Objects
     private final ObservableList<Player> player = FXCollections.observableArrayList();
     private final ObservableList<Player> team = FXCollections.observableArrayList();
+
+    // Three team rosters that need to be filled. displayTeam is the user-drafted team
+    // autoTeam1 and autoTeam2 are the CPU-drafted teams
     DisplayTeam displayTeam = new DisplayTeam();
     DisplayTeam autoTeam1 = new DisplayTeam();
     DisplayTeam autoTeam2 = new DisplayTeam();
+
+    // two String arrays for generating random team names for autoTeam1 and autoTeam2
     String[] mysteryNames1 = {"Run CMC", "Yippe Kai-Yay Justin Tucker", "Rolling with Mahomes", "Stuck in the End Zone",
     "Punt Intended", "My Kupp Runneth Over", "Davante's Inferno", "The Real Slim Brady", "Kmet the Frog", "Riding in my Lambeau"};
     String[] mysteryNames2 = {"RussellMania", "Legion of Boom", "Too Many Cooks", "Tua Legit Tua Quit", "Matty Ice and Easy",
     "Quarantine Salvation", "Play At Home Order", "Cobra Ky-ler", "Judge Jeudy", "High Wattage"};
 
+    // Player array containing QB objects
     Player[] QB = new Player[] {
             new QB("Josh Allen", "Buffalo Bills", "/images/small/JoshAllen.jpg",
                     "/images/large/JoshAllen.jpg", "QB", 402.58, 375.29, 4113.0,
@@ -70,6 +76,7 @@ public class PlayerSelectController {
                     19, 15, 99, 578.0, 3)
     };
 
+    // Player array containing RB objects
     Player[] RB = new Player[] {
             new RB("Jonathan Taylor", "Indianapolis Colts", "/images/small/JonathanTaylor.jpg",
                     "/images/large/JonathanTaylor.jpg", "RB", 373.1, 316.27, 1551,
@@ -133,6 +140,7 @@ public class PlayerSelectController {
                     7, 27, 228, 1, 233, 4.9),
     };
 
+    // Player array containing WR objects
     Player[] WR = new Player[] {
             new WR("Cooper Kupp", "Las Angeles Ram", "/images/small/CooperKupp.jpg",
                     "/images/large/CooperKupp.jpg", "WR", 439.5, 311.59,
@@ -196,6 +204,7 @@ public class PlayerSelectController {
                     0, 0, 65, 958, 8, 112, 14.6)
     };
 
+    // Player array containing TE objects
     Player[] TE = new Player[] {
             new TE("Mark Andrews", "Baltimore Ravens", "/images/small/MarkAndrews.jpg",
                     "/images/large/MarkAndrews.jpg", "TE", 301.1, 254.12,
@@ -229,6 +238,7 @@ public class PlayerSelectController {
                     0, 55, 591, 4, 85, 10.6 )
     };
 
+    // Player array containing K objects
     Player[] K = new Player[] {
             new K("Evan McPherson", "Cincinnati Bengals", "/images/small/EvanMcpherson.jpg",
                     "/images/large/EvanMcpherson.jpg", "K", 149.0, 148.83, 18,
@@ -262,6 +272,7 @@ public class PlayerSelectController {
                     6, 3, 27, 22, 41, 38)
     };
 
+    // Player array containing Def objects
     Player[] Def = new Player[] {
             new Def("Buffalo Bills", "Buffalo Bills", "/images/small/BuffaloBills.jpg",
                     "/images/large/BuffaloBills.jpg", "Def", 154.0, 129.83, 44,
@@ -295,6 +306,8 @@ public class PlayerSelectController {
                     12, 6, 3, 422, 6025.0),
     };
 
+    // counting trackers for how tallying which positions are filled on the roster
+    // and which positions are still eligible to be drafted for
     int rbNum = 0;
     int qbNum = 0;
     int wrNum = 0;
@@ -304,11 +317,18 @@ public class PlayerSelectController {
     int flexNum = 0;
 
 
+    /** Allows the user to enter in a team name of choice and click the "Commit" button to confirm
+     * The two CPU teams (autoTeam1 and autoTeam2) have randomly selected team names from the
+     * String arrays mysteryTeam1 and mysteryTeam2
+     * @param event button click "Commit" to submit team name
+     */
     @FXML
     void teamNameCommit(ActionEvent event) {
+        // generate random numbers to be used as index values
         int mysteryNum1 = (int)(Math.floor(Math.random() * 10));
         int mysteryNum2 = (int)(Math.floor(Math.random() * 10));
 
+        // assign random team names
         if (displayTeam.getTeamName() == null) {
             autoTeam1.setTeamName(mysteryNames1[mysteryNum1]);
             autoTeam2.setTeamName(mysteryNames2[mysteryNum2]);
@@ -320,8 +340,14 @@ public class PlayerSelectController {
         myTeam.setText(displayTeam.toString());
     }
 
+    /** Method allows for the drafting of a player, who is then added to the team rost
+     * @param event pressing the "Select Player" button will add the player
+     *              to the roster, as long as there is a roster spot available
+     */
     @FXML
     void selectPlayerButtonPress(ActionEvent event) {
+        // temporary Player arrays to be used to keep track of which player has been drafted
+        // so that the Player is removed from the list of available players
         Player[] tmpQB = new Player[QB.length - 1];
         Player[] tmpRB = new Player[RB.length - 1];
         Player[] tmpWR = new Player[WR.length - 1];
@@ -349,14 +375,16 @@ public class PlayerSelectController {
             else if (Objects.equals(position, "QB")) {
                 int j = 0;
                 for (Player value : QB) {
+                    // adds the player to the roster
                     if (Objects.equals(name, value.getPlayer()) && qbNum < 1) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
                         displayTeam.setQB(name);
                         qbNum++;
-                    } else {tmpQB[j++] = value;}
+                    } else {tmpQB[j++] = value;} // adds player to temp list to be added back to available players
                 }
                 QB = tmpQB;
+                // if this is the last position filled on the roster, draft is over
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
                     playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
@@ -382,6 +410,7 @@ public class PlayerSelectController {
                     } else {tmpRB[j++] = value;}
                 }
                 RB = tmpRB;
+                // if this is the last position filled on the roster, draft is over
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
                     playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
@@ -407,6 +436,7 @@ public class PlayerSelectController {
                     } else {tmpWR[j++] = value;}
                 }
                 WR = tmpWR;
+                // if this is the last position filled on the roster, draft is over
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
                     playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
@@ -428,6 +458,7 @@ public class PlayerSelectController {
                     } else {tmpTE[j++] = value;}
                 }
                 TE = tmpTE;
+                // if this is the last position filled on the roster, draft is over
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
                     playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
@@ -444,6 +475,7 @@ public class PlayerSelectController {
                     } else {tmpK[j++] = value;}
                 }
                 K = tmpK;
+                // if this is the last position filled on the roster, draft is over
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
                     playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
@@ -460,12 +492,14 @@ public class PlayerSelectController {
                     } else {tmpDef[j++] = value;}
                 }
                 Def = tmpDef;
+                // if this is the last position filled on the roster, draft is over
                 if (team.toArray().length == 9) {
                     playerImageView.setImage(new Image("images/large/Trophy.jpg"));
                     playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
                 }
             }
             // Auto Draft
+            // Both autoTeams will draft RB-WR-RB-WR-QB-TE-FLEX-DEF-K
             if(team.toArray().length != 9){
                 int j = 0;
                 if(autoTeam1.getRB1() == null) {
@@ -654,12 +688,14 @@ public class PlayerSelectController {
                 }
                 K = tmpK;
             }
+        // will not allow user to draft for a position that is already filled
         }catch(ArrayIndexOutOfBoundsException outOfBoundsException) {
             playerListView.getItems().clear();
             playerImageView.setImage(new Image("images/large/RedX.jpg"));
             playerStats.setText("That Position is Full, Try Again!");
         }catch(Exception ignored) {;};
 
+        // draft is over, display trophy and message
         if (team.toArray().length == 9) {
             playerImageView.setImage(new Image("images/large/Trophy.jpg"));
             playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
@@ -671,6 +707,10 @@ public class PlayerSelectController {
         mysteryTeam2.setText(autoTeam2.toString());
     }
 
+    /** Displays the ListView of available defense players
+     * @param event When the Def button is click, the ListView of available Def players
+     *              is shown
+     */
     @FXML
     void defButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -680,6 +720,11 @@ public class PlayerSelectController {
             playerListView.setItems(player);
         }
     }
+
+    /** Displays the ListView of available defense players
+     * @param event When the K button is click, the ListView of available K (kicker) players
+     *              is shown
+     */
     @FXML
     void kButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -689,6 +734,11 @@ public class PlayerSelectController {
             playerListView.setItems(player);
         }
     }
+
+    /** Displays the ListView of available defense players
+     * @param event When the Def button is click, the ListView of available QB (quarterback) players
+     *              is shown
+     */
     @FXML
     void qbButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -698,6 +748,11 @@ public class PlayerSelectController {
             playerListView.setItems(player);
         }
     }
+
+    /** Displays the ListView of available defense players
+     * @param event When the Def button is click, the ListView of available RB (running back) players
+     *              is shown
+     */
     @FXML
     void rbButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -707,6 +762,11 @@ public class PlayerSelectController {
             playerListView.setItems(player);
         }
     }
+
+    /** Displays the ListView of available defense players
+     * @param event When the Def button is click, the ListView of available TE (tight end) players
+     *              is shown
+     */
     @FXML
     void teButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -716,6 +776,11 @@ public class PlayerSelectController {
             playerListView.setItems(player);
         }
     }
+
+    /** Displays the ListView of available defense players
+     * @param event When the Def button is click, the ListView of available WR (wide receiver) players
+     *              is shown
+     */
     @FXML
     void wrButtonPress(ActionEvent event) {
         // populate the ObservableList<Player>
@@ -725,9 +790,8 @@ public class PlayerSelectController {
             playerListView.setItems(player);
         }
     }
-    /**
-     * Goto https://fantasy.espn.com/football/players/projections for player stats
-     */
+
+
     // initialize controller
     public void initialize() {
         playerListView.getSelectionModel().selectedItemProperty().addListener(

@@ -498,6 +498,9 @@ public class PlayerSelectController {
                     playerStats.setText("DRAFT COMPLETE! CONGRATS!!!");
                 }
             }
+            else{
+                throw new ArrayIndexOutOfBoundsException();
+            }
             // Auto Draft
             // Both autoTeams will draft RB-WR-RB-WR-QB-TE-FLEX-DEF-K
             if(team.toArray().length != 9){
@@ -693,7 +696,7 @@ public class PlayerSelectController {
             playerListView.getItems().clear();
             playerImageView.setImage(new Image("images/large/RedX.jpg"));
             playerStats.setText("That Position is Full, Try Again!");
-        }catch(Exception ignored) {;};
+        }catch(Exception ignored) {};
 
         // draft is over, display trophy and message
         if (team.toArray().length == 9) {

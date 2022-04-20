@@ -7,6 +7,8 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.util.Callback;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
@@ -338,6 +340,10 @@ public class PlayerSelectController {
         displayTeam.setTeamName(teamNameText.getText());
         teamNameText.clear();
         myTeam.setText(displayTeam.toString());
+        // Setup .mp3 sound and play when team commit is entered
+        Media sound = new Media(Objects.requireNonNull(getClass().getResource("nfl-draft-chime.mp3")).toExternalForm());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
     }
 
     /** Method allows for the drafting of a player, who is then added to the team rost

@@ -16,8 +16,7 @@ import javafx.stage.Stage;
 public class FantasyFootballDraft extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root =
-                FXMLLoader.load(getClass().getResource("PlayerSelect.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("PlayerSelect.fxml"));
 
         Scene scene = new Scene(root);
         stage.setTitle("Fantasy Football Draft");

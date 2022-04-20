@@ -43,6 +43,9 @@ public class PlayerSelectController {
     "Punt Intended", "My Kupp Runneth Over", "Davante's Inferno", "The Real Slim Brady", "Kmet the Frog", "Riding in my Lambeau"};
     String[] mysteryNames2 = {"RussellMania", "Legion of Boom", "Too Many Cooks", "Tua Legit Tua Quit", "Matty Ice and Easy",
     "Quarantine Salvation", "Play At Home Order", "Cobra Ky-ler", "Judge Jeudy", "High Wattage"};
+    // Setup .mp3 sound
+    Media sound = new Media(Objects.requireNonNull(getClass().getResource("nfl-draft-chime.mp3")).toExternalForm());
+    MediaPlayer mediaPlayer = new MediaPlayer(sound);
 
     // Player array containing QB objects
     Player[] QB = new Player[] {
@@ -340,9 +343,7 @@ public class PlayerSelectController {
         displayTeam.setTeamName(teamNameText.getText());
         teamNameText.clear();
         myTeam.setText(displayTeam.toString());
-        // Setup .mp3 sound and play when team commit is entered
-        Media sound = new Media(Objects.requireNonNull(getClass().getResource("nfl-draft-chime.mp3")).toExternalForm());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        // Play sound when team name committed
         mediaPlayer.play();
     }
 
@@ -402,11 +403,7 @@ public class PlayerSelectController {
                     if (Objects.equals(name, value.getPlayer()) && rbNum < 2) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        if(rbNum <1) {
-                            displayTeam.setRB1(name);
-                        } else {
-                            displayTeam.setRB2(name);
-                        }
+                        if(rbNum <1) {displayTeam.setRB1(name);} else {displayTeam.setRB2(name);}
                         rbNum++;
                     } else if (Objects.equals(name, value.getPlayer()) && flexNum < 1) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
@@ -428,11 +425,7 @@ public class PlayerSelectController {
                     if (Objects.equals(name, value.getPlayer()) && wrNum < 2) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());
                         teamListView.setItems(team);
-                        if(wrNum <1) {
-                            displayTeam.setWR1(name);
-                        } else {
-                            displayTeam.setWR2(name);
-                        }
+                        if(wrNum <1) {displayTeam.setWR1(name);} else {displayTeam.setWR2(name);}
                         wrNum++;
                     } else if (Objects.equals(name, value.getPlayer()) && flexNum < 1) {
                         team.add(playerListView.getSelectionModel().getSelectedItem());

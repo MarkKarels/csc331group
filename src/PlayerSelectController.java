@@ -43,9 +43,6 @@ public class PlayerSelectController {
     "Punt Intended", "My Kupp Runneth Over", "Davante's Inferno", "The Real Slim Brady", "Kmet the Frog", "Riding in my Lambeau"};
     String[] mysteryNames2 = {"RussellMania", "Legion of Boom", "Too Many Cooks", "Tua Legit Tua Quit", "Matty Ice and Easy",
     "Quarantine Salvation", "Play At Home Order", "Cobra Ky-ler", "Judge Jeudy", "High Wattage"};
-    // Setup .mp3 sound
-    Media sound = new Media(Objects.requireNonNull(getClass().getResource("nfl-draft-chime.mp3")).toExternalForm());
-    MediaPlayer mediaPlayer = new MediaPlayer(sound);
 
     // Player array containing QB objects
     Player[] QB = new Player[] {
@@ -344,6 +341,8 @@ public class PlayerSelectController {
         teamNameText.clear();
         myTeam.setText(displayTeam.toString());
         // Play sound when team name committed
+        Media sound = new Media(Objects.requireNonNull(getClass().getResource("nfl-draft-chime.mp3")).toExternalForm());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
     }
 

@@ -21,72 +21,72 @@
         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
     </padding>
     <top>
-        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <HBox prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#qbButtonPress" prefHeight="75.0" prefWidth="150.0" text="QB" textAlignment="CENTER">
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#qbButtonPress" prefHeight="50.0" prefWidth="150.0" text="QB" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
+                        <Insets bottom="5.0" left="17.75" right="17.75" top="5.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
                     </padding>
                 </Button>
-                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rbButtonPress" prefHeight="75.0" prefWidth="150.0" text="RB" textAlignment="CENTER">
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rbButtonPress" prefHeight="50.0" prefWidth="150.0" text="RB" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
+                        <Insets bottom="5.0" left="17.75" right="17.75" top="5.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
                     </padding>
                 </Button>
-                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#wrButtonPress" prefHeight="75.0" prefWidth="150.0" text="WR" textAlignment="CENTER">
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#wrButtonPress" prefHeight="50.0" prefWidth="150.0" text="WR" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
+                        <Insets bottom="5.0" left="17.75" right="17.75" top="5.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
                     </padding>
                 </Button>
-                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#teButtonPress" prefHeight="75.0" prefWidth="150.0" text="TE" textAlignment="CENTER">
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#teButtonPress" prefHeight="50.0" prefWidth="150.0" text="TE" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
+                        <Insets bottom="5.0" left="17.75" right="17.75" top="5.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
                     </padding>
                 </Button>
-                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#kButtonPress" prefHeight="75.0" prefWidth="150.0" text="K" textAlignment="CENTER">
+                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#kButtonPress" prefHeight="50.0" prefWidth="150.0" text="K" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
+                        <Insets bottom="5.0" left="17.75" right="17.75" top="5.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
                     </padding>
                 </Button>
-                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#defButtonPress" prefHeight="75.0" prefWidth="150.0" text="DEF/ST" textAlignment="CENTER">
+                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#defButtonPress" prefHeight="50.0" prefWidth="150.0" text="DEF/ST" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="18.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="15.0" left="17.75" right="17.75" top="15.0" />
+                        <Insets bottom="5.0" left="17.75" right="17.75" top="5.0" />
                     </HBox.margin>
                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
                     </padding>
                 </Button>
             </children>
@@ -211,7 +211,7 @@
       </VBox>
    </right>
    <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="370.0" prefWidth="1105.0" BorderPane.alignment="CENTER">
          <children>
             <TextArea fx:id="mysteryTeam1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="305.0">
                <HBox.margin>

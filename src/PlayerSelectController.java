@@ -341,7 +341,7 @@ public class PlayerSelectController {
         teamNameText.clear();
         myTeam.setText(displayTeam.toString());
         // Play sound when team name committed
-        Media sound = new Media(Objects.requireNonNull(getClass().getResource("nfl-draft-chime.mp3")).toExternalForm());
+        Media sound = new Media(Objects.requireNonNull(getClass().getResource("sounds/nfl-draft-chime.mp3")).toExternalForm());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
     }
